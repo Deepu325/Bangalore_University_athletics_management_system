@@ -458,11 +458,39 @@ router.get('/:id', async (req, res) => {
 
 // Create event
 router.post('/', async (req, res) => {
-  const event = new Event(req.body);
   try {
+    const { name, code, category, gender, participants } = req.body;
+
+    // Validate required fields
+    if (!name || !category || !gender) {
+      return res.status(400).json({
+        error: 'Missing required fields',
+        required: ['name', 'category', 'gender']
+      });
+    }
+
+    const event = new Event({
+      name,
+      code: code || '',
+      category,
+      gender,
+      participants: participants || [],
+      status: 'Upcoming'
+    });
+
     const newEvent = await event.save();
-    res.status(201).json(newEvent);
+
+    // Attach athletes to this event based on their registrations
+    const { attachAthletesToEvent } = await import('../utils/attachAthletesToEvent.js');
+    const attachResult = await attachAthletesToEvent(newEvent._id);
+
+    res.status(201).json({
+      ok: true,
+      event: newEvent,
+      attachedAthletes: attachResult.attachedCount
+    });
   } catch (error) {
+    console.error('Create event error:', error);
     res.status(400).json({ message: error.message });
   }
 });
@@ -472,10 +500,21 @@ router.patch('/:id', async (req, res) => {
   try {
     const event = await Event.findById(req.params.id);
     if (!event) return res.status(404).json({ message: 'Event not found' });
+    
     Object.assign(event, req.body);
     const updatedEvent = await event.save();
-    res.json(updatedEvent);
+
+    // Re-attach athletes based on current registrations
+    const { attachAthletesToEvent } = await import('../utils/attachAthletesToEvent.js');
+    const attachResult = await attachAthletesToEvent(updatedEvent._id);
+
+    res.json({
+      ok: true,
+      event: updatedEvent,
+      participants: attachResult.attachedCount
+    });
   } catch (error) {
+    console.error('Update event error:', error);
     res.status(400).json({ message: error.message });
   }
 });

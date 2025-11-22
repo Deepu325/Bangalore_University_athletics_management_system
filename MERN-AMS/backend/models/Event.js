@@ -1,59 +1,89 @@
 import mongoose from 'mongoose';
 
 const eventSchema = new mongoose.Schema({
+  // Event Information
   name: {
     type: String,
-    required: true
+    required: true,
+    trim: true,
+    index: true
   },
+  code: {
+    type: String,
+    trim: true,
+    unique: true,
+    sparse: true
+  },
+  
+  // Event Type & Categorization
   category: {
     type: String,
     required: true,
-    enum: ['track', 'field', 'jump', 'throw', 'relay', 'combined']
+    enum: ['track', 'field', 'jump', 'throw', 'relay', 'combined'],
+    index: true
   },
   gender: {
     type: String,
     required: true,
-    enum: ['Male', 'Female']
+    enum: ['Male', 'Female', 'Mixed'],
+    index: true
   },
+  
+  // Team Scoring
   countForTeam: {
     type: Boolean,
-    default: true // Set to false for Half Marathon, Mixed Relay
+    default: true
   },
+  
+  // Participants in this event
   participants: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Athlete'
   }],
+  
+  // Event Status
   status: {
     type: String,
     enum: ['Upcoming', 'Ongoing', 'Completed'],
-    default: 'Upcoming'
+    default: 'Upcoming',
+    index: true
   },
   date: {
     type: Date
   },
-  // Stage 5: Round 1 Results (ranked by performance)
+  
+  // ============ STAGE 5: ROUND 1 RESULTS ============
   round1Results: [{
-    type: Object,
-    default: []
+    athleteId: mongoose.Schema.Types.ObjectId,
+    bibNumber: String,
+    name: String,
+    college: String,
+    performance: String,  // Time or distance
+    rank: Number,
+    points: Number
   }],
-  // Stage 6: Top Athletes Selection
+  
+  // ============ STAGE 6: QUALIFIERS ============
   round2Qualified: [{
-    type: Object,
-    default: []
+    athleteId: mongoose.Schema.Types.ObjectId,
+    bibNumber: String,
+    name: String,
+    college: String,
+    performance: String
   }],
   qualifierCount: {
     type: Number,
     default: 0
   },
-  // Stage 6: Top Selection (Top 8 or Top 16)
+  
+  // ============ STAGE 6: TOP SELECTION ============
   topSelection: {
     selectedCount: {
-      type: Number, // 8 or 16
+      type: Number,  // 8 or 16
       default: 0
     },
     selectedAthleteIds: [{
-      type: String,
-      default: []
+      type: mongoose.Schema.Types.ObjectId
     }],
     timestamp: {
       type: Date,
@@ -65,11 +95,12 @@ const eventSchema = new mongoose.Schema({
       default: 'SELECTED'
     }
   },
-  // Stage 7: Heats Generation
+  
+  // ============ STAGE 7: HEATS GENERATION ============
   heats: [{
     heatNo: Number,
     athletes: [{
-      athleteId: String,
+      athleteId: mongoose.Schema.Types.ObjectId,
       bibNumber: String,
       name: String,
       college: String,
@@ -77,57 +108,72 @@ const eventSchema = new mongoose.Schema({
       seed: Number
     }]
   }],
-  // Stage 8: Heats Results
+  
+  // ============ STAGE 8: HEATS RESULTS ============
   heatsResults: [{
     heatNo: Number,
     athletes: [{
-      athleteId: String,
+      athleteId: mongoose.Schema.Types.ObjectId,
       performance: String,
       lane: Number
     }]
   }],
-  // Stage 9: Final Results (Top 8 or selected finals)
-  finalResults: [{
-    athleteId: String,
+  
+  // ============ STAGE 9: FINALS ============
+  finalists: [{
+    athleteId: mongoose.Schema.Types.ObjectId,
     bibNumber: String,
     name: String,
+    college: String,
+    lane: Number,        // IAAF lane assignment
+    seed: Number         // Seed position
+  }],
+  
+  finalResults: [{
+    athleteId: mongoose.Schema.Types.ObjectId,
+    bibNumber: String,
+    name: String,
+    college: String,
     performance: String,
     rank: Number,
     points: Number
   }],
-  // Combined team points
+  
+  // ============ TEAM POINTS ============
   combinedPoints: [{
-    collegeId: String,
+    collegeId: mongoose.Schema.Types.ObjectId,
     collegeName: String,
     totalPoints: Number,
     rank: Number
   }],
-
-  // Phase 4: Finalists selection (Top 8 with lane assignments for finals)
-  finalists: [{
-    athleteId: String,
-    bibNumber: String,
-    name: String,
-    college: String,
-    lane: Number,        // IAAF lane assignment for finals
-    seed: Number         // Seed position (1-8)
-  }],
-
-  // Status tracking across all stages
+  
+  // ============ WORKFLOW & METADATA ============
+  stage: {
+    type: String,
+    default: 'created',
+    index: true
+  },
   statusFlow: {
     type: Object,
     default: {}
   },
-
-  stage: {
-    type: String,
-    default: 'created'
-  },
-
+  
   createdAt: {
+    type: Date,
+    default: Date.now,
+    index: true
+  },
+  updatedAt: {
     type: Date,
     default: Date.now
   }
+}, {
+  timestamps: true,
+  strict: true  // Only accept defined fields
 });
+
+// Index for common queries
+eventSchema.index({ gender: 1, category: 1 });
+eventSchema.index({ name: 1, gender: 1 });
 
 export default mongoose.model('Event', eventSchema);

@@ -27,17 +27,31 @@ const collegeSchema = new mongoose.Schema({
     trim: true,
     match: [/^\d{6,15}$/, 'PED phone must be numeric (6-15 digits)']
   },
+  location: {
+    type: String,
+    trim: true,
+    default: ''
+  },
+  contact: {
+    type: String,
+    trim: true,
+    default: ''
+  },
   createdAt: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+    index: true
   },
   updatedAt: {
     type: Date,
     default: Date.now
   }
+}, {
+  timestamps: true,
+  strict: true
 });
 
-// Ensure unique indexes
+// Compound unique indexes
 collegeSchema.index({ code: 1 }, { unique: true });
 collegeSchema.index({ name: 1 }, { unique: true });
 
