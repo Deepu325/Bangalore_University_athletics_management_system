@@ -12,12 +12,11 @@ const Footer = () => (
     }}
   >
     <p style={{ margin: "5px 0" }}>
-      © 2025 Bangalore University | Athletic Meet Management System
+      © simsdkc | Athletics Management System | Delivering Reliable Digital Infrastructure
     </p>
 
     <p style={{ margin: "5px 0" }}>
-      Developed by: <strong style={{ color: "#a78bfa" }}>Deepu K C</strong> | 
-      Soundarya Institute of Management and Science
+      Developed by: <strong style={{ color: "#a78bfa" }}>Deepu K C</strong>
     </p>
 
     <p style={{ margin: "5px 0", fontSize: "12px" }}>
