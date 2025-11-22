@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BU-AMS - Bangalore University Athletic Meet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-pattern {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl font-bold text-purple-600">BU-AMS</span>
+                    <span class="text-sm text-gray-600">Athletic Meet System</span>
+                </div>
+                <button class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700">Admin Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-pattern text-white py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Bangalore University</h1>
+                <h2 class="text-3xl md:text-4xl font-semibold mb-6">Athletic Meet Management System</h2>
+                <p class="text-xl mb-2 opacity-90">Complete Digital Athletics Platform - MERN Stack</p>
+                <p class="text-lg mb-8 opacity-80">⚡ React + Express + MongoDB + Node.js</p>
+                <div class="flex gap-4 justify-center flex-wrap">
+                    <button class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        View Events & Results
+                    </button>
+                    <button class="bg-purple-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-900 transition border-2 border-white">
+                        Admin Dashboard
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Event Categories -->
+    <div class="max-w-7xl mx-auto px-6 py-16">
+        <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Event Categories</h3>
+        <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+                <div class="text-5xl mb-4">🏃</div>
+                <h4 class="font-bold mb-3 text-gray-800">Track Events</h4>
+                <p class="text-sm text-gray-600">100m, 200m, 400m, Hurdles & More</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+                <div class="text-5xl mb-4">🦘</div>
+                <h4 class="font-bold mb-3 text-gray-800">Jump Events</h4>
+                <p class="text-sm text-gray-600">Long Jump, High Jump, Pole Vault</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+                <div class="text-5xl mb-4">💪</div>
+                <h4 class="font-bold mb-3 text-gray-800">Throw Events</h4>
+                <p class="text-sm text-gray-600">Shot Put, Discus, Javelin, Hammer</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+                <div class="text-5xl mb-4">🤝</div>
+                <h4 class="font-bold mb-3 text-gray-800">Relay Events</h4>
+                <p class="text-sm text-gray-600">4x100m, 4x400m, Mixed Relay</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+                <div class="text-5xl mb-4">🏆</div>
+                <h4 class="font-bold mb-3 text-gray-800">Combined</h4>
+                <p class="text-sm text-gray-600">Decathlon & Heptathlon</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MERN Stack Features -->
+    <div class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">MERN Stack Features</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">⚛️</div>
+                    <h4 class="font-semibold mb-2">React Frontend</h4>
+                    <p class="text-sm text-gray-600">Modern Component-based UI</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">🟢</div>
+                    <h4 class="font-semibold mb-2">Node.js Backend</h4>
+                    <p class="text-sm text-gray-600">Express REST APIs</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">🍃</div>
+                    <h4 class="font-semibold mb-2">MongoDB</h4>
+                    <p class="text-sm text-gray-600">NoSQL Database</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">🔒</div>
+                    <h4 class="font-semibold mb-2">JWT Auth</h4>
+                    <p class="text-sm text-gray-600">Secure Authentication</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="bg-white border-t border-gray-200 py-6">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-600">
+                <span class="inline-block w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                Backend API: <strong>Running on http://localhost:5000</strong>
+            </p>
+            <p class="text-gray-600 mt-2">
+                <span class="inline-block w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                Frontend React App: <strong>Compiling...</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2024 Bangalore University Athletic Meet. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

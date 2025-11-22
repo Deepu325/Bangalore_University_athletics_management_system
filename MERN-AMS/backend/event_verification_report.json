@@ -1,0 +1,19 @@
+{
+  "totalEvents": 48,
+  "uniqueCombos": 48,
+  "duplicateGroups": [],
+  "missingCanonical": [],
+  "combinedChecks": [
+    {
+      "name": "Decathlon",
+      "male": true,
+      "female": false
+    },
+    {
+      "name": "Heptathlon",
+      "male": false,
+      "female": true
+    }
+  ],
+  "timestamp": "2025-11-20T17:20:35.892Z"
+}

@@ -1,0 +1,5658 @@
+[
+  {
+    "name": "HARSHITHA G",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1001",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MADHU",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1002",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "LATHAN",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1003",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "TEJASWINI K",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1004",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RAMYA R",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1005",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "TEJU",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1006",
+    "events": {
+      "individual": [
+        "400",
+        "JT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ARPITHA N",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1007",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SAHANA A",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1008",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "GOWTHAMI R",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1009",
+    "events": {
+      "individual": [
+        "100 H",
+        "JT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SHIVANI BAI",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1010",
+    "events": {
+      "individual": [
+        "400 H",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NANDINI",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1011",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "YASHASWINI",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1012",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RENUKA",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1013",
+    "events": {
+      "individual": [
+        "DT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NEHA",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1014",
+    "events": {
+      "individual": [
+        "DT",
+        "HT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "CHANDANA M",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1015",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "LIKITHA M.P",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1016",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VINUTHA",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1017",
+    "events": {
+      "individual": [
+        "HJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VARSHINI R",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1018",
+    "events": {
+      "individual": [
+        "20 W",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "CHANDANA M.M",
+    "gender": "Women",
+    "college": "OM SAI DEGREE COLLEGE",
+    "chestNo": "1019",
+    "events": {
+      "individual": [
+        "20 W",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MADAPPA S",
+    "gender": "Men",
+    "college": "G.F.G.C Jayanagar, Bangalore",
+    "chestNo": "1020",
+    "events": {
+      "individual": [
+        "400",
+        "HJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RAGHAVENDRA K",
+    "gender": "Men",
+    "college": "G.F.G.C Jayanagar, Bangalore",
+    "chestNo": "1021",
+    "events": {
+      "individual": [
+        "5000",
+        "10000"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SRENIDHI L",
+    "gender": "Men",
+    "college": "G.F.G.C Jayanagar, Bangalore",
+    "chestNo": "1022",
+    "events": {
+      "individual": [
+        "1500",
+        "LJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NAGARAJU",
+    "gender": "Men",
+    "college": "G.F.G.C Jayanagar, Bangalore",
+    "chestNo": "1023",
+    "events": {
+      "individual": [
+        "5000",
+        "800"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "BHOPAIAH",
+    "gender": "Men",
+    "college": "G.F.G.C Jayanagar, Bangalore",
+    "chestNo": "1024",
+    "events": {
+      "individual": [
+        "200",
+        "400"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "BASKAR N",
+    "gender": "Men",
+    "college": "G.F.G.C Jayanagar, Bangalore",
+    "chestNo": "1025",
+    "events": {
+      "individual": [
+        "800",
+        "HJ"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "REHAN SHAREFF",
+    "gender": "Men",
+    "college": "G.F.G.C Jayanagar, Bangalore",
+    "chestNo": "1026",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MADHU U",
+    "gender": "Men",
+    "college": "G.F.G.C Jayanagar, Bangalore",
+    "chestNo": "1027",
+    "events": {
+      "individual": [
+        "SP",
+        "JT"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RAKSHITHA J",
+    "gender": "Women",
+    "college": "G.F.G.C Jayanagar, Bangalore",
+    "chestNo": "1028",
+    "events": {
+      "individual": [
+        "400",
+        "800"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "LAVANYA",
+    "gender": "Women",
+    "college": "G.F.G.C Jayanagar, Bangalore",
+    "chestNo": "1029",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "LAVANYA M",
+    "gender": "Women",
+    "college": "G.F.G.C Jayanagar, Bangalore",
+    "chestNo": "1030",
+    "events": {
+      "individual": [
+        "200",
+        "400"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SRUSTI",
+    "gender": "Women",
+    "college": "G.F.G.C Jayanagar, Bangalore",
+    "chestNo": "1031",
+    "events": {
+      "individual": [
+        "100",
+        "800"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ABHISHEK",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1032",
+    "events": {
+      "individual": [
+        "LJ",
+        "400"
+      ],
+      "relay": null,
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "SACHIN",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1033",
+    "events": {
+      "individual": [
+        "200",
+        "800"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "M D MEHRAJ",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1034",
+    "events": {
+      "individual": [
+        "DEC",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SYED ARFATH",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1035",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "M D SHADAB",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1036",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NAJEEB YADRAMI",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1037",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SABEER AHMED",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1038",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "ABDUL RAZAK",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1039",
+    "events": {
+      "individual": [
+        "1500",
+        "10000"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NITHIN R. GOWDA",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1040",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KRISHNA RAMESH",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1041",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PRAVEEN GOUDA",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1042",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PRAKASH KUMAR",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1043",
+    "events": {
+      "individual": [
+        "JT",
+        "400"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "T RAMESH",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1044",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PAVAN G.D",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1045",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ABHISHEK M.N",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1046",
+    "events": {
+      "individual": [
+        "5000",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VISHNU PRASAD C.",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1047",
+    "events": {
+      "individual": [
+        "5000",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SAMASTA S.A",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1048",
+    "events": {
+      "individual": [
+        "1500",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "GIRIDHAR K",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1049",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "GOKUL",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1050",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "AZIMA",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1051",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PRAMALITHA DHANYA S",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1052",
+    "events": {
+      "individual": [
+        "SP",
+        "JT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SAHITYA",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1053",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KHAINAT KALADGI",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1054",
+    "events": {
+      "individual": [
+        "1500",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RESHMA BEGUM",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1055",
+    "events": {
+      "individual": [
+        "1500",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "TANMAIY",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1056",
+    "events": {
+      "individual": [
+        "LJ",
+        "TJ"
+      ],
+      "relay": null,
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "ANKITHA B I",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1057",
+    "events": {
+      "individual": [
+        "100 H",
+        "400 H"
+      ],
+      "relay": null,
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "BAKSHI",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1058",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "BHOOMIKA K WATI",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1059",
+    "events": {
+      "individual": [
+        "SP",
+        "LJ"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "UMMESANIYA",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1060",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SATYAMMA KATTIMANI",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1061",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PAVITHRA",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1062",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "AMBIKA",
+    "gender": "Women",
+    "college": "Universal School of Administration",
+    "chestNo": "1063",
+    "events": {
+      "individual": [
+        "DT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ABHISHEK",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1064",
+    "events": {
+      "individual": [
+        "100",
+        "JT"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "HARSHITH",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1065",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SANKET",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1066",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MANOHAR",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1067",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SANDESH",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1068",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ATHULF",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1069",
+    "events": {
+      "individual": [
+        "400",
+        "LJ"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "YOGESH",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1070",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ASAD",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1071",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "GAGAN",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1072",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PRAVEEN",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1073",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SUDEEP",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1074",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RAKESH",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1075",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "HARSHITH",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1076",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ABHISHEK",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1077",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": null,
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "KAVYA",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1078",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "SANDEEP",
+    "gender": "Men",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1079",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": null,
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "ANJALI",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1080",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "KAVYA",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1081",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SINDHU",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1082",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SANDHYA",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1083",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ANJALI",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1084",
+    "events": {
+      "individual": [
+        "SP",
+        "JT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "JENIFAR",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1085",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PUSHIPALATHA",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1086",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RISHIKA",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1087",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SOWMYA",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1088",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KAVYA",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1089",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SANDYA",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1090",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SINDU",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1091",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ANJALI",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1092",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KUSUMA",
+    "gender": "Women",
+    "college": "SHANTINIKETAN COLLEGE",
+    "chestNo": "1093",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ABHISHEK",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1094",
+    "events": {
+      "individual": [
+        "LJ",
+        "400"
+      ],
+      "relay": null,
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "SACHIN",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1095",
+    "events": {
+      "individual": [
+        null,
+        "800"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MD MEHRAJ",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1096",
+    "events": {
+      "individual": [
+        "800",
+        "110 H"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SYED ARFAT",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1097",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MD SHAHAD",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1098",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NAJEER YADRAMI",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1099",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SABEER AHMAD",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1100",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "ABDUL RAZAK",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1101",
+    "events": {
+      "individual": [
+        "1500",
+        "5000"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NITHIN B GOWDA",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1102",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KRISHNA RAMESH",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1103",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PRAVEEN GOWDA",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1104",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PRAKASH KUMAR",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1105",
+    "events": {
+      "individual": [
+        "JT",
+        "400"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "T RAMESH",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1106",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PAVAN G D",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1107",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ABHISHEK M N",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1108",
+    "events": {
+      "individual": [
+        "5000",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VISHNU PRASAD C",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1109",
+    "events": {
+      "individual": [
+        "5000",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SAMASTA S A",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1110",
+    "events": {
+      "individual": [
+        "1500",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "GIRIDHAR K",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1111",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "GOKUL",
+    "gender": "Men",
+    "college": "Universal School of Administration",
+    "chestNo": "1112",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "TEJAS S G",
+    "gender": "Men",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1113",
+    "events": {
+      "individual": [
+        "5000",
+        null
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ABHISHEK G S",
+    "gender": "Men",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1114",
+    "events": {
+      "individual": [
+        null,
+        "1500"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PRAJWAL",
+    "gender": "Men",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1115",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PAVAN",
+    "gender": "Men",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1116",
+    "events": {
+      "individual": [
+        "200",
+        "sp"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "AJESH",
+    "gender": "Men",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1117",
+    "events": {
+      "individual": [
+        "1500",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RAKESH",
+    "gender": "Men",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1118",
+    "events": {
+      "individual": [
+        "110 H",
+        null
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "JOSEPH",
+    "gender": "Men",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1119",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MOHAN",
+    "gender": "Men",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1120",
+    "events": {
+      "individual": [
+        "10000",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RAJESH",
+    "gender": "Men",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1121",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VARUN",
+    "gender": "Men",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1122",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MANOJ",
+    "gender": "Men",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1123",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SONAKSHI M",
+    "gender": "Women",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1124",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SUPRIYA I",
+    "gender": "Women",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1125",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MONIKA L",
+    "gender": "Women",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1126",
+    "events": {
+      "individual": [
+        "1500",
+        "5000"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "JENITHA K",
+    "gender": "Women",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1127",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MOULYA G",
+    "gender": "Women",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1128",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ANUSHREE S",
+    "gender": "Women",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1129",
+    "events": {
+      "individual": [
+        "1500",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "LEEMA MATHEW",
+    "gender": "Women",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1130",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SUSHMA",
+    "gender": "Women",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1131",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VINDHYA P A",
+    "gender": "Women",
+    "college": "ST PAULS COLLEGE",
+    "chestNo": "1132",
+    "events": {
+      "individual": [
+        "20 W",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SAHANA. V",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1133",
+    "events": {
+      "individual": [
+        "100 H",
+        "DEC"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "THANUSHREE. K",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1134",
+    "events": {
+      "individual": [
+        "3000 SC",
+        "HM"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SHRESTHA. M. K",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1135",
+    "events": {
+      "individual": [
+        "400",
+        "HM"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NEHA. P",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1136",
+    "events": {
+      "individual": [
+        "SP",
+        "JT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ROOPIKA. A",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1137",
+    "events": {
+      "individual": [
+        "100",
+        "LJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "AASIMA IFFATH",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1138",
+    "events": {
+      "individual": [
+        "JT",
+        "200"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PRATHIBHA",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1139",
+    "events": {
+      "individual": [
+        "100 H",
+        "DEC"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ANKITHA R",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1140",
+    "events": {
+      "individual": [
+        "SP",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RAKSHITHA. M",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1141",
+    "events": {
+      "individual": [
+        "400",
+        "800"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "GANAVI. A",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1142",
+    "events": {
+      "individual": [
+        "200",
+        "HJ"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "AMRUTHA G",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1143",
+    "events": {
+      "individual": [
+        "LJ",
+        "100"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "KEERTHANA. G",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1144",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SHREYA. S. NASIR",
+    "gender": "Women",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1145",
+    "events": {
+      "individual": [
+        "HT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "S THANUSH",
+    "gender": "Men",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1146",
+    "events": {
+      "individual": [
+        "100",
+        "LJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "GANGADHAR K S",
+    "gender": "Men",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1147",
+    "events": {
+      "individual": [
+        "800",
+        "400"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "S SUMITH RAJ",
+    "gender": "Men",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1148",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "BENAKA RAJ",
+    "gender": "Men",
+    "college": "NMKRV COLLEGE",
+    "chestNo": "1149",
+    "events": {
+      "individual": [
+        "LJ",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "SPOORTHI A",
+    "gender": "Women",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1150",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PRIYANSHI",
+    "gender": "Women",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1151",
+    "events": {
+      "individual": [
+        "SP",
+        "200"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SANTHOSH KUMAR T",
+    "gender": "Women",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1152",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VIDYASHREE M",
+    "gender": "Women",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1153",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VIDHISHA C M",
+    "gender": "Women",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1154",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "BHAVANI C S",
+    "gender": "Women",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1155",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SANDEEP L",
+    "gender": "Men",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1156",
+    "events": {
+      "individual": [
+        "DT",
+        "JT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ABHISHEK H U",
+    "gender": "Men",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1157",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ROHITH V",
+    "gender": "Men",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1158",
+    "events": {
+      "individual": [
+        "LJ",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NAGARAJ GOUDRA T L",
+    "gender": "Men",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1159",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "LITHIK N",
+    "gender": "Men",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1160",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KOUSHIK S",
+    "gender": "Men",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1161",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "THEJAS REDDY P",
+    "gender": "Men",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1162",
+    "events": {
+      "individual": [
+        "SP",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "THANUSH KUMAR L",
+    "gender": "Men",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1163",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "YASHWANTH K",
+    "gender": "Men",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1164",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KUSHAL D N",
+    "gender": "Men",
+    "college": "ARUNODAYA COLLEGE",
+    "chestNo": "1165",
+    "events": {
+      "individual": [
+        "HJ",
+        "LJ"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "AISHWARYA",
+    "gender": "Women",
+    "college": "Sree Siddaganga First Grade College of Arts and Commerce. Nelamangala",
+    "chestNo": "1166",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VIKAS L",
+    "gender": "Men",
+    "college": "Padmashree Institute of Management & Sciences",
+    "chestNo": "1167",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VIKAS L",
+    "gender": "Men",
+    "college": "Padmashree Institute of Management & Sciences",
+    "chestNo": "1168",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ANVITH PRAJWAL MATHAS",
+    "gender": "Men",
+    "college": "R R Institute of Management Studies- Chikkabanavara",
+    "chestNo": "1169",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PUNEETH KUMAR T",
+    "gender": "Men",
+    "college": "R R Institute of Management Studies- Chikkabanavara",
+    "chestNo": "1170",
+    "events": {
+      "individual": [
+        "DT",
+        "HT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "GAJENDRA",
+    "gender": "Men",
+    "college": "UVCE Dep. of Architecture.",
+    "chestNo": "1171",
+    "events": {
+      "individual": [
+        "1500",
+        "5000"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PUNEETH",
+    "gender": "Men",
+    "college": "UVCE Dep. of Architecture.",
+    "chestNo": "1172",
+    "events": {
+      "individual": [
+        "20 W",
+        "400"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "AFLAH",
+    "gender": "Men",
+    "college": "UVCE Dep. of Architecture.",
+    "chestNo": "1173",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KARTHIK NAYAK",
+    "gender": "Men",
+    "college": "UVCE Dep. of Architecture.",
+    "chestNo": "1174",
+    "events": {
+      "individual": [
+        "100",
+        "1500"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "SAPRAM SAI VENKAT",
+    "gender": "Men",
+    "college": "UVCE Dep. of Architecture.",
+    "chestNo": "1175",
+    "events": {
+      "individual": [
+        "LJ",
+        "TJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "MD. FAWAD",
+    "gender": "Men",
+    "college": "UVCE Dep. of Architecture.",
+    "chestNo": "1176",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SAMVRIT",
+    "gender": "Men",
+    "college": "UVCE Dep. of Architecture.",
+    "chestNo": "1177",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MANOJ KARANTH",
+    "gender": "Men",
+    "college": "UVCE Dep. of Architecture.",
+    "chestNo": "1178",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SUDEEP GOWDA",
+    "gender": "Men",
+    "college": "Sree Siddaganga First Grade College of Arts and Commerce. Nelamangala",
+    "chestNo": "1179",
+    "events": {
+      "individual": [
+        "LJ",
+        "3000 SC"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SURAJ",
+    "gender": "Men",
+    "college": "Sree Siddaganga First Grade College of Arts and Commerce. Nelamangala",
+    "chestNo": "1180",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NITHISH",
+    "gender": "Men",
+    "college": "Sree Siddaganga First Grade College of Arts and Commerce. Nelamangala",
+    "chestNo": "1181",
+    "events": {
+      "individual": [
+        "3000 SC",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KARTHIK",
+    "gender": "Men",
+    "college": "Sree Siddaganga First Grade College of Arts and Commerce. Nelamangala",
+    "chestNo": "1182",
+    "events": {
+      "individual": [
+        "1500",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SUDEEPA",
+    "gender": "Men",
+    "college": "Sree Siddaganga First Grade College of Arts and Commerce. Nelamangala",
+    "chestNo": "1183",
+    "events": {
+      "individual": [
+        "HM",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MUSTAF",
+    "gender": "Men",
+    "college": "Sree Siddaganga First Grade College of Arts and Commerce. Nelamangala",
+    "chestNo": "1184",
+    "events": {
+      "individual": [
+        "HM",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Amrutha",
+    "gender": "Women",
+    "college": "LOYALA Degree College",
+    "chestNo": "1185",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Anupavithra",
+    "gender": "Women",
+    "college": "LOYALA Degree College",
+    "chestNo": "1186",
+    "events": {
+      "individual": [
+        "DT",
+        "20 KM"
+      ],
+      "relay": null,
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "Sandhya.V",
+    "gender": "Women",
+    "college": "LOYALA Degree College",
+    "chestNo": "1187",
+    "events": {
+      "individual": [
+        "800",
+        "400"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Vinodhini.A",
+    "gender": "Women",
+    "college": "LOYALA Degree College",
+    "chestNo": "1188",
+    "events": {
+      "individual": [
+        "1500",
+        "5000"
+      ],
+      "relay": null,
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "Bindu Bai",
+    "gender": "Women",
+    "college": "LOYALA Degree College",
+    "chestNo": "1189",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Kavya.J",
+    "gender": "Women",
+    "college": "LOYALA Degree College",
+    "chestNo": "1190",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Shilpa.M",
+    "gender": "Women",
+    "college": "LOYALA Degree College",
+    "chestNo": "1191",
+    "events": {
+      "individual": [
+        "100",
+        "sp"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Krithika.H",
+    "gender": "Women",
+    "college": "LOYALA Degree College",
+    "chestNo": "1192",
+    "events": {
+      "individual": [
+        "800",
+        "HJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Vinitha.",
+    "gender": "Women",
+    "college": "LOYALA Degree College",
+    "chestNo": "1193",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "DARSHAN R",
+    "gender": "Men",
+    "college": "LOYALA Degree College",
+    "chestNo": "1194",
+    "events": {
+      "individual": [
+        "HJ",
+        "TJ"
+      ],
+      "relay": "4*400",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "V. Dhanush",
+    "gender": "Men",
+    "college": "LOYALA Degree College",
+    "chestNo": "1195",
+    "events": {
+      "individual": [
+        "SP",
+        "1500"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Tejas",
+    "gender": "Men",
+    "college": "LOYALA Degree College",
+    "chestNo": "1196",
+    "events": {
+      "individual": [
+        "800",
+        "1500"
+      ],
+      "relay": "4*400",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "Gagan",
+    "gender": "Men",
+    "college": "LOYALA Degree College",
+    "chestNo": "1197",
+    "events": {
+      "individual": [
+        "SP",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Subash. S",
+    "gender": "Men",
+    "college": "LOYALA Degree College",
+    "chestNo": "1198",
+    "events": {
+      "individual": [
+        "1500",
+        "5000"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "YASHWANTH B.R",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1199",
+    "events": {
+      "individual": [
+        "800",
+        "1500"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PRAJWAL H",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1200",
+    "events": {
+      "individual": [
+        "LJ",
+        "TJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "YOGESH A.G",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1201",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NARENDRA",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1202",
+    "events": {
+      "individual": [
+        "DT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MURTHY M",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1203",
+    "events": {
+      "individual": [
+        "HJ",
+        "110 H"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "AKSHAY A.S",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1204",
+    "events": {
+      "individual": [
+        "800",
+        "3000 SC"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "BYRE GOWDA D",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1205",
+    "events": {
+      "individual": [
+        "1500",
+        "20 KM"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "YASHWANTH B",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1206",
+    "events": {
+      "individual": [
+        "HJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VIKRAMRAJ",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1207",
+    "events": {
+      "individual": [
+        "SP",
+        "HT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RAGHAVENDRA N",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1208",
+    "events": {
+      "individual": [
+        "SP",
+        "HT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "CHETAN N",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1209",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "CHARAN GOWDA",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1210",
+    "events": {
+      "individual": [
+        "20 W",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MAHESH",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1211",
+    "events": {
+      "individual": [
+        "3000 SC",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "AKASH P",
+    "gender": "Men",
+    "college": "BGS Institute of Management",
+    "chestNo": "1212",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PREETHI S.",
+    "gender": "Women",
+    "college": "BGS Institute of Management",
+    "chestNo": "1213",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "KANNIKA LAKSHMI G.",
+    "gender": "Women",
+    "college": "BGS Institute of Management",
+    "chestNo": "1214",
+    "events": {
+      "individual": [
+        "SP",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "TEJASWINI J.B",
+    "gender": "Women",
+    "college": "BGS Institute of Management",
+    "chestNo": "1215",
+    "events": {
+      "individual": [
+        "800",
+        "1500"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "MONIKA M",
+    "gender": "Women",
+    "college": "BGS Institute of Management",
+    "chestNo": "1216",
+    "events": {
+      "individual": [
+        "400",
+        "800"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VISHNU PRIYA REDDY N.",
+    "gender": "Women",
+    "college": "BGS Institute of Management",
+    "chestNo": "1217",
+    "events": {
+      "individual": [
+        "JT",
+        "20 KM"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SINCHANA G.S",
+    "gender": "Women",
+    "college": "BGS Institute of Management",
+    "chestNo": "1218",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "V. P. KUSHAL",
+    "gender": "Men",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1219",
+    "events": {
+      "individual": [
+        "1500",
+        "3000 SC"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MANU T",
+    "gender": "Men",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1220",
+    "events": {
+      "individual": [
+        "400",
+        "800"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "DARSHAN K. B",
+    "gender": "Men",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1221",
+    "events": {
+      "individual": [
+        "400",
+        "1500"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ANIL",
+    "gender": "Men",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1222",
+    "events": {
+      "individual": [
+        "5000",
+        "HM"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VENKATESH",
+    "gender": "Men",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1223",
+    "events": {
+      "individual": [
+        "5000",
+        "3000 SC"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "HARSHANAVARDHAN K.",
+    "gender": "Men",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1224",
+    "events": {
+      "individual": [
+        "100",
+        "400 H"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MONISH KUMAR",
+    "gender": "Men",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1225",
+    "events": {
+      "individual": [
+        "800",
+        "400 H"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KANTHAVELU",
+    "gender": "Men",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1226",
+    "events": {
+      "individual": [
+        "200",
+        "TJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "HARISHKUMAR B. G.",
+    "gender": "Men",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1227",
+    "events": {
+      "individual": [
+        "DT",
+        "JT"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "JANARDHAN M",
+    "gender": "Men",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1228",
+    "events": {
+      "individual": [
+        "DT",
+        "JT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "YOGESH. K",
+    "gender": "Men",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1229",
+    "events": {
+      "individual": [
+        "SP",
+        "HT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SANJAYA",
+    "gender": "Men",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1230",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "HASINI G.",
+    "gender": "Women",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1231",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SHREYA G.B.",
+    "gender": "Women",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1232",
+    "events": {
+      "individual": [
+        "800",
+        "400 H"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "TEJASWINI N.",
+    "gender": "Women",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1233",
+    "events": {
+      "individual": [
+        "800",
+        "sp"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NANDINI KUMARI",
+    "gender": "Women",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1234",
+    "events": {
+      "individual": [
+        "400",
+        "1500"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "AMRUTHA R.",
+    "gender": "Women",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1235",
+    "events": {
+      "individual": [
+        "DT",
+        "JT"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RAKSHITHA",
+    "gender": "Women",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1236",
+    "events": {
+      "individual": [
+        "10000",
+        "HM"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "HARSHITHA .R.",
+    "gender": "Women",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1237",
+    "events": {
+      "individual": [
+        "SP",
+        "HT"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "AISHWARYA",
+    "gender": "Women",
+    "college": "Swamy Vivekananda Rural First Grade College Chandrapura",
+    "chestNo": "1238",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RAHUL LOKANATHAN",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1239",
+    "events": {
+      "individual": [
+        "110 H",
+        "400 H"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "VIJAYANANDA. A",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1240",
+    "events": {
+      "individual": [
+        "5000",
+        "10000"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VAIBHAV SINGH",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1241",
+    "events": {
+      "individual": [
+        "400",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "21"
+    }
+  },
+  {
+    "name": "STALIN RAJ",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1242",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "21"
+    }
+  },
+  {
+    "name": "SHASHI KUMAR V",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1243",
+    "events": {
+      "individual": [
+        "20 W",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "DHYAN. R",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1244",
+    "events": {
+      "individual": [
+        "1500",
+        null
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SUGHAN. C",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1245",
+    "events": {
+      "individual": [
+        "HT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RANJITH. A",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1246",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "M RAHUL RAJ",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1247",
+    "events": {
+      "individual": [
+        "DT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "DHARSHAN. C",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1248",
+    "events": {
+      "individual": [
+        "JT",
+        "3000 SC"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "A. ALISON ABSOLOM",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1249",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NIRANTAN. G",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1250",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "TILAK. D",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1251",
+    "events": {
+      "individual": [
+        "1500",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "HITESH",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1252",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PAVAN S",
+    "gender": "Men",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1253",
+    "events": {
+      "individual": [
+        "400 H",
+        "3000 SC"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MADHUSHREE M R",
+    "gender": "Women",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1254",
+    "events": {
+      "individual": [
+        "20 W",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "DANIYA AARON",
+    "gender": "Women",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1255",
+    "events": {
+      "individual": [
+        "100 H",
+        "400 H"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400 MR"
+    }
+  },
+  {
+    "name": "AYISHA",
+    "gender": "Women",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1256",
+    "events": {
+      "individual": [
+        "1500",
+        "5000"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "DAKSHAYANI V",
+    "gender": "Women",
+    "college": "St. Claret College Autonomous",
+    "chestNo": "1257",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Niranjan",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1258",
+    "events": {
+      "individual": [
+        "LJ",
+        "100"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Beeralinga",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1259",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Sugotho Priya",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1260",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Thahid Pasha",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1261",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Dhanush",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1262",
+    "events": {
+      "individual": [
+        "HJ",
+        "800"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Mahanth",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1263",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Vinaya",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1264",
+    "events": {
+      "individual": [
+        "200",
+        "800"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Srujan",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1265",
+    "events": {
+      "individual": [
+        "DT",
+        "400"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Bhargavnath",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1266",
+    "events": {
+      "individual": [
+        "SP",
+        "HT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Chandhu",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1267",
+    "events": {
+      "individual": [
+        "SP",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Nithin",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1268",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Joseph",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1269",
+    "events": {
+      "individual": [
+        "HJ",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Sharanappa",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1270",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Sulthan",
+    "gender": "Men",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1271",
+    "events": {
+      "individual": [
+        "1500",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Lakshmi",
+    "gender": "Women",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1272",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Varsha",
+    "gender": "Women",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1273",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Roopashree",
+    "gender": "Women",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1274",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Ananya",
+    "gender": "Women",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1275",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Aishwararya",
+    "gender": "Women",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1276",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Nandhini",
+    "gender": "Women",
+    "college": "Sardar Vallabai Patel First Grade College",
+    "chestNo": "1277",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NASIR ALI KHAN",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1278",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NISAR ALI KHAN",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1279",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KIRAN K S",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1280",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "AKASH K N",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1281",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PRADEEP C",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1282",
+    "events": {
+      "individual": [
+        "1500",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MADHESHA K S",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1283",
+    "events": {
+      "individual": [
+        "100",
+        "400"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NAVEEN T S",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1284",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MUTHURAJ C G",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1285",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PREM KUMAR K N",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1286",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "THEERTHESH D",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1287",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KIRAN V",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1288",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KIRAN G",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1289",
+    "events": {
+      "individual": [
+        "DT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PUNITH M",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1290",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "CHANDRA R",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1291",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "DILEEP A T",
+    "gender": "Men",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1292",
+    "events": {
+      "individual": [
+        "DT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "BINDUSHREE S",
+    "gender": "Women",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1293",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "DHANUSHREE D",
+    "gender": "Women",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1294",
+    "events": {
+      "individual": [
+        "400",
+        "800"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VIDYASHREE A S",
+    "gender": "Women",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1295",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SOUNDARYA",
+    "gender": "Women",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1296",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SIDDARAJAMMA",
+    "gender": "Women",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1297",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ARCHANA",
+    "gender": "Women",
+    "college": "GFGC Kodihalli Kanakapura",
+    "chestNo": "1298",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SPOORTHI B",
+    "gender": "Women",
+    "college": "Don Bosco Institute of Management Studies and Computer Applications",
+    "chestNo": "1299",
+    "events": {
+      "individual": [
+        "DEC",
+        "sp"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MONIKA D M",
+    "gender": "Women",
+    "college": "Don Bosco Institute of Management Studies and Computer Applications",
+    "chestNo": "1300",
+    "events": {
+      "individual": [
+        "DEC",
+        "JT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SHRAVYA",
+    "gender": "Women",
+    "college": "Don Bosco Institute of Management Studies and Computer Applications",
+    "chestNo": "1301",
+    "events": {
+      "individual": [
+        "JT",
+        "sp"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MONISHA",
+    "gender": "Women",
+    "college": "Don Bosco Institute of Management Studies and Computer Applications",
+    "chestNo": "1302",
+    "events": {
+      "individual": [
+        "SP",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NAVYA",
+    "gender": "Women",
+    "college": "Don Bosco Institute of Management Studies and Computer Applications",
+    "chestNo": "1303",
+    "events": {
+      "individual": [
+        "100",
+        "800"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "NITHYANJALI",
+    "gender": "Women",
+    "college": "Don Bosco Institute of Management Studies and Computer Applications",
+    "chestNo": "1304",
+    "events": {
+      "individual": [
+        "DEC",
+        "LJ"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SHAMBHAVI",
+    "gender": "Women",
+    "college": "Don Bosco Institute of Management Studies and Computer Applications",
+    "chestNo": "1305",
+    "events": {
+      "individual": [
+        "10000",
+        "TJ"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "JALAJA",
+    "gender": "Women",
+    "college": "Don Bosco Institute of Management Studies and Computer Applications",
+    "chestNo": "1306",
+    "events": {
+      "individual": [
+        "100",
+        "800"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Sanjay R",
+    "gender": "Female",
+    "college": "SET Degree College",
+    "chestNo": "1307",
+    "events": {
+      "individual": [
+        "JT",
+        "HT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Prakruthi BT",
+    "gender": "Female",
+    "college": "ASC Degree College",
+    "chestNo": "1308",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "kusuma AV",
+    "gender": "Female",
+    "college": "ASC Degree College",
+    "chestNo": "1309",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Kavya",
+    "gender": "Female",
+    "college": "ASC Degree College",
+    "chestNo": "1310",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Preksha Gowda",
+    "gender": "Female",
+    "college": "ASC Degree College",
+    "chestNo": "1311",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Inchara",
+    "gender": "Female",
+    "college": "ASC Degree College",
+    "chestNo": "1312",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Laasya",
+    "gender": "Female",
+    "college": "ASC Degree College",
+    "chestNo": "1313",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Gnanesh",
+    "gender": "Male",
+    "college": "ASC Degree College",
+    "chestNo": "1314",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Shashank",
+    "gender": "Male",
+    "college": "ASC Degree College",
+    "chestNo": "1315",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Chethan reddy",
+    "gender": "Male",
+    "college": "ISME",
+    "chestNo": "1316",
+    "events": {
+      "individual": [
+        "100",
+        "JT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Shreyas N",
+    "gender": "Male",
+    "college": "ISME",
+    "chestNo": "1317",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Abisaik rizal",
+    "gender": "Male",
+    "college": "ISME",
+    "chestNo": "1318",
+    "events": {
+      "individual": [
+        "100",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Suhas M reddy",
+    "gender": "Male",
+    "college": "ISME",
+    "chestNo": "1319",
+    "events": {
+      "individual": [
+        "SP",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Yuvashree H",
+    "gender": "Male",
+    "college": "Vasavi Jnana Peetha First grade College",
+    "chestNo": "1320",
+    "events": {
+      "individual": [
+        "Heptathlon",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "prahalad H",
+    "gender": "Male",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1321",
+    "events": {
+      "individual": [
+        "20KM",
+        "3000"
+      ],
+      "relay": "4*400",
+      "mixedRelay": "4*400"
+    }
+  },
+  {
+    "name": "nandish B",
+    "gender": "Male",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1322",
+    "events": {
+      "individual": [
+        "1500",
+        "HM"
+      ],
+      "relay": "4*400",
+      "mixedRelay": "4*400"
+    }
+  },
+  {
+    "name": "Maruthi M",
+    "gender": "Male",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1323",
+    "events": {
+      "individual": [
+        "HM",
+        "5000"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ramachandra D",
+    "gender": "Male",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1324",
+    "events": {
+      "individual": [
+        "20KM",
+        "5000"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Ashok N",
+    "gender": "Male",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1325",
+    "events": {
+      "individual": [
+        "1500",
+        "10000"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Prajwel D",
+    "gender": "Male",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1326",
+    "events": {
+      "individual": [
+        "10000",
+        "3000"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "dawan Gowda SM",
+    "gender": "Male",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1327",
+    "events": {
+      "individual": [
+        "400",
+        "800"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "naveen C",
+    "gender": "Male",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1328",
+    "events": {
+      "individual": [
+        "400",
+        "800"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Lakshminarayana",
+    "gender": "Male",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1329",
+    "events": {
+      "individual": [
+        "110",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400"
+    }
+  },
+  {
+    "name": "Urmila",
+    "gender": "Female",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1330",
+    "events": {
+      "individual": [
+        "3000",
+        "HM"
+      ],
+      "relay": "4*100",
+      "mixedRelay": "4*400"
+    }
+  },
+  {
+    "name": "Bhavana",
+    "gender": "Female",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1331",
+    "events": {
+      "individual": [
+        "20KM",
+        "3000"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Anjali D",
+    "gender": "Female",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1332",
+    "events": {
+      "individual": [
+        "800",
+        "1500"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Shilpa",
+    "gender": "Female",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1333",
+    "events": {
+      "individual": [
+        "HM",
+        "LJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Keerthi",
+    "gender": "Female",
+    "college": "GFGCT dasarahalli",
+    "chestNo": "1334",
+    "events": {
+      "individual": [
+        "800",
+        "20KM"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Vishwa",
+    "gender": "Male",
+    "college": "GFGC Channapatna",
+    "chestNo": "1335",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Murali GN",
+    "gender": "Male",
+    "college": "GFGC Channapatna",
+    "chestNo": "1336",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "yeshwanth J",
+    "gender": "Male",
+    "college": "GFGC Channapatna",
+    "chestNo": "1337",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Akash",
+    "gender": "Male",
+    "college": "GFGC Channapatna",
+    "chestNo": "1338",
+    "events": {
+      "individual": [
+        "5000",
+        "10000"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Mohan Kumar SV",
+    "gender": "Male",
+    "college": "GFGC Channapatna",
+    "chestNo": "1339",
+    "events": {
+      "individual": [
+        "5000",
+        null
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Mohammed Saad",
+    "gender": "Male",
+    "college": "GFGC Channapatna",
+    "chestNo": "1340",
+    "events": {
+      "individual": [
+        "400",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Siddesh S",
+    "gender": "Male",
+    "college": "GFGC Channapatna",
+    "chestNo": "1341",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Dhanush BS",
+    "gender": "Male",
+    "college": "GFGC Channapatna",
+    "chestNo": "1342",
+    "events": {
+      "individual": [
+        "DT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Sunil kumar KP",
+    "gender": "Male",
+    "college": "GFGC Channapatna",
+    "chestNo": "1343",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Kiran DS",
+    "gender": "Male",
+    "college": "GFGC Channapatna",
+    "chestNo": "1344",
+    "events": {
+      "individual": [
+        "DT",
+        "HT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Raghunandan S",
+    "gender": "Male",
+    "college": "GFGC Channapatna",
+    "chestNo": "1345",
+    "events": {
+      "individual": [
+        "LJ",
+        "TJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Jeevan V",
+    "gender": "Male",
+    "college": "GFGC Channapatna",
+    "chestNo": "1346",
+    "events": {
+      "individual": [
+        "HM",
+        null
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SHOBHA",
+    "gender": "Female",
+    "college": "GFGC Channapatna",
+    "chestNo": "1347",
+    "events": {
+      "individual": [
+        "100",
+        "LJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "GOPIKA K RAJU",
+    "gender": "Female",
+    "college": "GFGC Channapatna",
+    "chestNo": "1348",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KEERTHANA N.S",
+    "gender": "Female",
+    "college": "GFGC Channapatna",
+    "chestNo": "1349",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "KAVYA",
+    "gender": "Female",
+    "college": "GFGC Channapatna",
+    "chestNo": "1350",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SRUSTI",
+    "gender": "Female",
+    "college": "GFGC Channapatna",
+    "chestNo": "1351",
+    "events": {
+      "individual": [
+        "SP",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "RAHUL K. S",
+    "gender": "Male",
+    "college": "T John College",
+    "chestNo": "1352",
+    "events": {
+      "individual": [
+        "400",
+        "800"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "JOEL JOY",
+    "gender": "Male",
+    "college": "T John College",
+    "chestNo": "1353",
+    "events": {
+      "individual": [
+        "400",
+        "800"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "THANMAY V. S",
+    "gender": "Male",
+    "college": "T John College",
+    "chestNo": "1354",
+    "events": {
+      "individual": [
+        "1500",
+        "5000"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SREEHARI V. S",
+    "gender": "Male",
+    "college": "T John College",
+    "chestNo": "1355",
+    "events": {
+      "individual": [
+        "1500",
+        "5000"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "DHANUSH KUMAR",
+    "gender": "Male",
+    "college": "T John College",
+    "chestNo": "1356",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MOHAMMED FURQAAN",
+    "gender": "Male",
+    "college": "T John College",
+    "chestNo": "1357",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Vishal P. Gowda",
+    "gender": "Male",
+    "college": "T John College",
+    "chestNo": "1358",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "PRERANA SHANKAR",
+    "gender": "Female",
+    "college": "T John College",
+    "chestNo": "1359",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "SAHANA M",
+    "gender": "Female",
+    "college": "T John College",
+    "chestNo": "1360",
+    "events": {
+      "individual": [
+        "100",
+        "SP"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "ASHWINI P",
+    "gender": "Female",
+    "college": "T John College",
+    "chestNo": "1361",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "MONICA C",
+    "gender": "Female",
+    "college": "T John College",
+    "chestNo": "1362",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "VARSHINI",
+    "gender": "Female",
+    "college": "T John College",
+    "chestNo": "1363",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Kethan",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1364",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Mithun",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1365",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Harsha M",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1366",
+    "events": {
+      "individual": [
+        "400",
+        "1500"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Vishesh B",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1367",
+    "events": {
+      "individual": [
+        "1500",
+        "3000 SC"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Harsha R Gowda",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1368",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": "4*400",
+      "mixedRelay": "4*400"
+    }
+  },
+  {
+    "name": "Kishan",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1369",
+    "events": {
+      "individual": [
+        "800",
+        null
+      ],
+      "relay": "4*400",
+      "mixedRelay": "4*400"
+    }
+  },
+  {
+    "name": "Navneeth Babu",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1370",
+    "events": {
+      "individual": [
+        "5000",
+        null
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Venkatesh",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1371",
+    "events": {
+      "individual": [
+        null,
+        null
+      ],
+      "relay": "4*400",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Tejas",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1372",
+    "events": {
+      "individual": [
+        "SP",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Rohith R",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1373",
+    "events": {
+      "individual": [
+        "SP",
+        "HJ"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Gokul",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1374",
+    "events": {
+      "individual": [
+        "100",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Aditya R Kini",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1375",
+    "events": {
+      "individual": [
+        "100",
+        "400"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Chethan C R",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1376",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Suresh M",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1377",
+    "events": {
+      "individual": [
+        "LJ",
+        "HJ"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "B. Bharath",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1378",
+    "events": {
+      "individual": [
+        "DT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Nithin P L",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1379",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Rohith V",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1380",
+    "events": {
+      "individual": [
+        "20 Walk",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Saravana",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1381",
+    "events": {
+      "individual": [
+        "20 Walk",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Pavan Kumar J",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1382",
+    "events": {
+      "individual": [
+        "DECATHLON",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Pradeep",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1383",
+    "events": {
+      "individual": [
+        "110",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Gowtham",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1384",
+    "events": {
+      "individual": [
+        "HT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Chethan S",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1385",
+    "events": {
+      "individual": [
+        "HT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Nischith",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1386",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Harsha",
+    "gender": "Male",
+    "college": "Pinnacle College",
+    "chestNo": "1387",
+    "events": {
+      "individual": [
+        "DECATHLON",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Bhrunda bai",
+    "gender": "Female",
+    "college": "Pinnacle College",
+    "chestNo": "1388",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": null,
+      "mixedRelay": "4*400"
+    }
+  },
+  {
+    "name": "Tejawini",
+    "gender": "Female",
+    "college": "Pinnacle College",
+    "chestNo": "1389",
+    "events": {
+      "individual": [
+        "100",
+        "200"
+      ],
+      "relay": null,
+      "mixedRelay": "4*400"
+    }
+  },
+  {
+    "name": "Naveen H",
+    "gender": "Male",
+    "college": "GFGC Bididi",
+    "chestNo": "1390",
+    "events": {
+      "individual": [
+        "200",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Yathin T. Gonda",
+    "gender": "Male",
+    "college": "GFGC Bididi",
+    "chestNo": "1391",
+    "events": {
+      "individual": [
+        "LJ",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Mudukanna Hosur",
+    "gender": "Male",
+    "college": "GFGC Bididi",
+    "chestNo": "1392",
+    "events": {
+      "individual": [
+        "800",
+        "1500"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Pavan",
+    "gender": "Male",
+    "college": "GFGC Bididi",
+    "chestNo": "1393",
+    "events": {
+      "individual": [
+        "SP",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Sunil N",
+    "gender": "Male",
+    "college": "GFGC Bididi",
+    "chestNo": "1394",
+    "events": {
+      "individual": [
+        "SP",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Muttu",
+    "gender": "Male",
+    "college": "GFGC Bididi",
+    "chestNo": "1395",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Lakshminarayana",
+    "gender": "Male",
+    "college": "GFGC Bididi",
+    "chestNo": "1396",
+    "events": {
+      "individual": [
+        "1500",
+        "5000"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Surendra K",
+    "gender": "Male",
+    "college": "GFGC Bididi",
+    "chestNo": "1397",
+    "events": {
+      "individual": [
+        "1500",
+        "SP"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Nagaraju",
+    "gender": "Male",
+    "college": "GFGC Bididi",
+    "chestNo": "1398",
+    "events": {
+      "individual": [
+        "JT",
+        null
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Saiyda K",
+    "gender": "Female",
+    "college": "GFGC Bididi",
+    "chestNo": "1399",
+    "events": {
+      "individual": [
+        "1500",
+        "HJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Prethi K",
+    "gender": "Female",
+    "college": "GFGC Bididi",
+    "chestNo": "1400",
+    "events": {
+      "individual": [
+        "800",
+        "LJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Mallamma A",
+    "gender": "Female",
+    "college": "GFGC Bididi",
+    "chestNo": "1401",
+    "events": {
+      "individual": [
+        "800",
+        "LJ"
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Jayalakshmi N",
+    "gender": "Female",
+    "college": "GFGC Bididi",
+    "chestNo": "1402",
+    "events": {
+      "individual": [
+        "1500",
+        null
+      ],
+      "relay": "4*100",
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Kavya H",
+    "gender": "Female",
+    "college": "GFGC Bididi",
+    "chestNo": "1403",
+    "events": {
+      "individual": [
+        "SP",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  },
+  {
+    "name": "Priya S",
+    "gender": "Female",
+    "college": "GFGC Bididi",
+    "chestNo": "1404",
+    "events": {
+      "individual": [
+        "SP",
+        "DT"
+      ],
+      "relay": null,
+      "mixedRelay": null
+    }
+  }
+]

@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BU-AMS - Multi-Row Athlete Registration</title>
+    
+    <!-- React and ReactDOM via CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <!-- Babel Standalone for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0b84ff 0%, #1e40af 100%);
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .toast {
+            animation: slideIn 0.3s ease;
+        }
+        
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+        }
+        
+        table tbody tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // ==================== SIMULATED BACKEND API ====================
+        class SimulatedBackendAPI {
+            constructor() {
+                this.initDB();
+            }
+
+            async initDB() {
+                return new Promise((resolve, reject) => {
+                    const request = indexedDB.open('BU_AMS_DB', 1);
+                    
+                    request.onerror = () => reject(request.error);
+                    request.onsuccess = () => {
+                        this.db = request.result;
+                        resolve();
+                    };
+                    
+                    request.onupgradeneeded = (event) => {
+                        const db = event.target.result;
+                        
+                        if (!db.objectStoreNames.contains('colleges')) {
+                            db.createObjectStore('colleges', { keyPath: 'id', autoIncrement: true });
+                        }
+                        if (!db.objectStoreNames.contains('athletes')) {
+                            db.createObjectStore('athletes', { keyPath: 'id', autoIncrement: true });
+                        }
+                        if (!db.objectStoreNames.contains('relayTeams')) {
+                            db.createObjectStore('relayTeams', { keyPath: 'id', autoIncrement: true });
+                        }
+                    };
+                });
+            }
+
+            async getAll(storeName) {
+                return new Promise((resolve, reject) => {
+                    const transaction = this.db.transaction([storeName], 'readonly');
+                    const store = transaction.objectStore(storeName);
+                    const request = store.getAll();
+                    
+                    request.onsuccess = () => resolve(request.result);
+                    request.onerror = () => reject(request.error);
+                });
+            }
+
+            async create(storeName, data) {
+                return new Promise((resolve, reject) => {
+                    const transaction = this.db.transaction([storeName], 'readwrite');
+                    const store = transaction.objectStore(storeName);
+                    const request = store.add(data);
+                    
+                    request.onsuccess = () => resolve({ ...data, id: request.result });
+                    request.onerror = () => reject(request.error);
+                });
+            }
+
+            async delete(storeName, id) {
+                return new Promise((resolve, reject) => {
+                    const transaction = this.db.transaction([storeName], 'readwrite');
+                    const store = transaction.objectStore(storeName);
+                    const request = store.delete(id);
+                    
+                    request.onsuccess = () => resolve(true);
+                    request.onerror = () => reject(request.error);
+                });
+            }
+
+            async seedData() {
+                const colleges = await this.getAll('colleges');
+                if (colleges.length === 0) {
+                    await this.create('colleges', {
+                        code: 'RVCE',
+                        name: 'RV College of Engineering',
+                        pedName: 'Dr. Kumar',
+                        phone: '9876543210'
+                    });
+                    await this.create('colleges', {
+                        code: 'BMSCE',
+                        name: 'BMS College of Engineering',
+                        pedName: 'Prof. Sharma',
+                        phone: '9876543211'
+                    });
+                    await this.create('colleges', {
+                        code: 'MSRIT',
+                        name: 'MS Ramaiah Institute of Technology',
+                        pedName: 'Dr. Patel',
+                        phone: '9876543212'
+                    });
+                }
+            }
+        }
+
+        const API = new SimulatedBackendAPI();
+
+        // ==================== CUSTOM HOOKS ====================
+        const useAPI = () => {
+            const [colleges, setColleges] = useState([]);
+            const [athletes, setAthletes] = useState([]);
+            const [loading, setLoading] = useState(true);
+
+            const fetchAll = async () => {
+                setLoading(true);
+                try {
+                    const [collegesData, athletesData] = await Promise.all([
+                        API.getAll('colleges'),
+                        API.getAll('athletes')
+                    ]);
+                    setColleges(collegesData);
+                    setAthletes(athletesData);
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                } finally {
+                    setLoading(false);
+                }
+            };
+
+            useEffect(() => {
+                fetchAll();
+            }, []);
+
+            return { colleges, athletes, loading, refetch: fetchAll };
+        };
+
+        // ==================== COMPONENTS ====================
+
+        // Toast Component
+        const Toast = ({ message, type = 'success', onClose }) => {
+            useEffect(() => {
+                const timer = setTimeout(onClose, 3000);
+                return () => clearTimeout(timer);
+            }, [onClose]);
+
+            const colors = {
+                success: 'bg-green-50 text-green-800 border-green-200',
+                error: 'bg-red-50 text-red-800 border-red-200',
+                info: 'bg-blue-50 text-blue-800 border-blue-200'
+            };
+
+            return (
+                <div className={`toast fixed top-4 right-4 px-6 py-4 rounded-lg shadow-2xl border-2 z-50 ${colors[type]}`}>
+                    <span className="font-semibold">{message}</span>
+                </div>
+            );
+        };
+
+        // Header Component
+        const Header = ({ user }) => {
+            return (
+                <nav className="bg-white shadow-md border-b-4 border-blue-600">
+                    <div className="max-w-7xl mx-auto px-6 py-4">
+                        <div className="flex justify-between items-center">
+                            <div className="flex items-center gap-4">
+                                <h1 className="text-2xl font-bold text-blue-600">BU-AMS</h1>
+                                <span className="text-sm text-gray-600">Athletic Meet Management</span>
+                            </div>
+                            <div className="flex items-center gap-4">
+                                <span className="text-sm text-gray-700 font-medium">👤 {user?.name || 'Guest'}</span>
+                                {user && <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">{user.role}</span>}
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            );
+        };
+
+        // All Registered Athletes Component
+        const AllRegisteredAthletes = ({ showToast, user }) => {
+            const { colleges, athletes, refetch } = useAPI();
+            const [selectedCollege, setSelectedCollege] = useState('');
+            const [selectedGender, setSelectedGender] = useState('');
+            const [selectedEvent, setSelectedEvent] = useState('');
+            const [searchText, setSearchText] = useState('');
+
+            // All possible events
+            const allEventsList = [
+                '100m', '200m', '400m', '800m', '1500m', '5000m', '10000m',
+                '400m Hurdles', '20km Walk', '3000m Steeplechase', 'Half Marathon',
+                '110m Hurdles', '100m Hurdles',
+                'High Jump', 'Long Jump', 'Pole Vault', 'Triple Jump',
+                'Discus Throw', 'Hammer Throw', 'Javelin Throw', 'Shot Put',
+                'Decathlon', 'Heptathlon',
+                '4x100m Relay', '4x400m Relay', '4x400m Mixed Relay'
+            ];
+
+            // Filter athletes based on selected filters
+            const getFilteredAthletes = () => {
+                let filtered = [...athletes];
+
+                // College filter
+                if (selectedCollege) {
+                    filtered = filtered.filter(a => a.collegeId == selectedCollege);
+                }
+
+                // Gender filter
+                if (selectedGender) {
+                    filtered = filtered.filter(a => a.gender === selectedGender);
+                }
+
+                // Event filter
+                if (selectedEvent) {
+                    filtered = filtered.filter(a =>
+                        a.event1 === selectedEvent ||
+                        a.event2 === selectedEvent ||
+                        a.relay1 === selectedEvent ||
+                        a.relay2 === selectedEvent ||
+                        a.mixedRelay === selectedEvent
+                    );
+                }
+
+                // Search filter
+                if (searchText) {
+                    const search = searchText.toLowerCase();
+                    filtered = filtered.filter(a =>
+                        a.name.toLowerCase().includes(search) ||
+                        a.chestNo.includes(search) ||
+                        (a.uucms && a.uucms.toLowerCase().includes(search))
+                    );
+                }
+
+                return filtered;
+            };
+
+            const filteredAthletes = getFilteredAthletes();
+
+            // Export functions (simulated)
+            const handleExportAll = () => {
+                showToast('Exporting all athletes to PDF...', 'info');
+                // In real app, call: window.open('/api/pdf/athletes/all.pdf')
+            };
+
+            const handleExportByCollege = () => {
+                if (!selectedCollege) {
+                    showToast('Please select a college first', 'error');
+                    return;
+                }
+                showToast('Exporting athletes by college to PDF...', 'info');
+                // In real app, call: window.open(`/api/pdf/athletes/college/${selectedCollege}.pdf`)
+            };
+
+            const handleExportByEvent = () => {
+                if (!selectedEvent) {
+                    showToast('Please select an event first', 'error');
+                    return;
+                }
+                showToast('Exporting athletes by event to PDF...', 'info');
+                // In real app, call: window.open(`/api/pdf/athletes/event/${selectedEvent}.pdf`)
+            };
+
+            const handleExportByGender = () => {
+                if (!selectedGender) {
+                    showToast('Please select a gender first', 'error');
+                    return;
+                }
+                showToast('Exporting athletes by gender to PDF...', 'info');
+                // In real app, call: window.open(`/api/pdf/athletes/gender/${selectedGender}.pdf`)
+            };
+
+            const handleDeleteAthlete = async (id) => {
+                if (confirm('Delete this athlete?')) {
+                    await API.delete('athletes', id);
+                    showToast('Athlete deleted successfully', 'success');
+                    refetch();
+                }
+            };
+
+            const clearAllFilters = () => {
+                setSelectedCollege('');
+                setSelectedGender('');
+                setSelectedEvent('');
+                setSearchText('');
+            };
+
+            return (
+                <div className="min-h-screen bg-gray-50 py-8">
+                    <div className="max-w-7xl mx-auto px-6">
+                        {/* Header */}
+                        <div className="bg-white rounded-lg shadow-sm p-6 mb-6 border-l-4 border-blue-600">
+                            <h1 className="text-3xl font-bold text-gray-800">All Registered Athletes</h1>
+                            <p className="text-gray-600 mt-1">Complete list with powerful filters and export options</p>
+                        </div>
+
+                        {/* Filter Bar */}
+                        <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                                {/* College Filter */}
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                        College
+                                    </label>
+                                    <select
+                                        value={selectedCollege}
+                                        onChange={(e) => setSelectedCollege(e.target.value)}
+                                        className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                    >
+                                        <option value="">All Colleges</option>
+                                        {colleges.map(c => (
+                                            <option key={c.id} value={c.id}>{c.name}</option>
+                                        ))}
+                                    </select>
+                                </div>
+
+                                {/* Gender Filter */}
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                        Gender
+                                    </label>
+                                    <select
+                                        value={selectedGender}
+                                        onChange={(e) => setSelectedGender(e.target.value)}
+                                        className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                    >
+                                        <option value="">All Genders</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+
+                                {/* Event Filter */}
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                        Event
+                                    </label>
+                                    <select
+                                        value={selectedEvent}
+                                        onChange={(e) => setSelectedEvent(e.target.value)}
+                                        className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                    >
+                                        <option value="">All Events</option>
+                                        {allEventsList.map(e => (
+                                            <option key={e} value={e}>{e}</option>
+                                        ))}
+                                    </select>
+                                </div>
+
+                                {/* Search Bar */}
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                        Search
+                                    </label>
+                                    <input
+                                        type="text"
+                                        value={searchText}
+                                        onChange={(e) => setSearchText(e.target.value)}
+                                        placeholder="Name, Chest No, UUCMS..."
+                                        className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Action Buttons */}
+                            <div className="flex flex-wrap gap-2 items-center justify-between">
+                                <div className="flex gap-2">
+                                    <span className="px-4 py-2 bg-blue-100 text-blue-700 font-bold rounded-lg">
+                                        {filteredAthletes.length} Athletes Found
+                                    </span>
+                                    <button
+                                        onClick={clearAllFilters}
+                                        className="px-4 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300"
+                                    >
+                                        Clear Filters
+                                    </button>
+                                </div>
+
+                                <div className="flex flex-wrap gap-2">
+                                    <button
+                                        onClick={handleExportAll}
+                                        className="px-4 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700"
+                                    >
+                                        📄 Export All
+                                    </button>
+                                    <button
+                                        onClick={handleExportByCollege}
+                                        className="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700"
+                                    >
+                                        📄 By College
+                                    </button>
+                                    <button
+                                        onClick={handleExportByEvent}
+                                        className="px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700"
+                                    >
+                                        📄 By Event
+                                    </button>
+                                    <button
+                                        onClick={handleExportByGender}
+                                        className="px-4 py-2 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700"
+                                    >
+                                        📄 By Gender
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Athletes Table */}
+                        <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <div className="overflow-x-auto">
+                                <table className="w-full">
+                                    <thead className="bg-blue-600 text-white">
+                                        <tr>
+                                            <th className="px-4 py-3 text-left text-xs font-bold">SL</th>
+                                            <th className="px-4 py-3 text-left text-xs font-bold">Chest No</th>
+                                            <th className="px-4 py-3 text-left text-xs font-bold">Name</th>
+                                            <th className="px-4 py-3 text-left text-xs font-bold">Gender</th>
+                                            <th className="px-4 py-3 text-left text-xs font-bold">College Name</th>
+                                            <th className="px-4 py-3 text-left text-xs font-bold">Event 1</th>
+                                            <th className="px-4 py-3 text-left text-xs font-bold">Event 2</th>
+                                            <th className="px-4 py-3 text-left text-xs font-bold">Relay 1</th>
+                                            <th className="px-4 py-3 text-left text-xs font-bold">Relay 2</th>
+                                            <th className="px-4 py-3 text-left text-xs font-bold">Mixed Relay</th>
+                                            <th className="px-4 py-3 text-left text-xs font-bold">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {filteredAthletes.length === 0 ? (
+                                            <tr>
+                                                <td colSpan="11" className="px-4 py-12 text-center text-gray-500">
+                                                    <div className="text-5xl mb-4">🔍</div>
+                                                    <h3 className="text-lg font-semibold mb-2">No Athletes Found</h3>
+                                                    <p>Try adjusting your filters or search criteria</p>
+                                                </td>
+                                            </tr>
+                                        ) : (
+                                            filteredAthletes.map((a, idx) => {
+                                                const athleteCollege = colleges.find(c => c.id === a.collegeId);
+                                                return (
+                                                    <tr key={a.id} className="border-b hover:bg-gray-50">
+                                                        <td className="px-4 py-3 text-sm font-medium">{idx + 1}</td>
+                                                        <td className="px-4 py-3 text-sm font-bold text-blue-600">{a.chestNo}</td>
+                                                        <td className="px-4 py-3 text-sm font-medium">{a.name}</td>
+                                                        <td className="px-4 py-3 text-sm">
+                                                            <span className={`px-2 py-1 rounded text-xs font-semibold ${
+                                                                a.gender === 'Male' 
+                                                                    ? 'bg-blue-100 text-blue-700' 
+                                                                    : 'bg-pink-100 text-pink-700'
+                                                            }`}>
+                                                                {a.gender === 'Male' ? 'M' : 'F'}
+                                                            </span>
+                                                        </td>
+                                                        <td className="px-4 py-3 text-sm font-medium text-gray-700">
+                                                            {athleteCollege ? athleteCollege.name : '-'}
+                                                        </td>
+                                                        <td className="px-4 py-3 text-sm">{a.event1 || '-'}</td>
+                                                        <td className="px-4 py-3 text-sm">{a.event2 || '-'}</td>
+                                                        <td className="px-4 py-3 text-sm">{a.relay1 || '-'}</td>
+                                                        <td className="px-4 py-3 text-sm">{a.relay2 || '-'}</td>
+                                                        <td className="px-4 py-3 text-sm">{a.mixedRelay || '-'}</td>
+                                                        <td className="px-4 py-3 text-sm">
+                                                            <button
+                                                                onClick={() => handleDeleteAthlete(a.id)}
+                                                                className="text-red-600 hover:text-red-800 font-semibold"
+                                                            >
+                                                                🗑️
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                );
+                                            })
+                                        )}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // Multi-Row Athlete Registration Component
+        const AthleteRegistration = ({ showToast, user }) => {
+            const { colleges, athletes, refetch } = useAPI();
+            const [selectedCollege, setSelectedCollege] = useState('');
+            const [activeTab, setActiveTab] = useState('men'); // men | women | all
+            const [athleteRows, setAthleteRows] = useState([]);
+
+            // Events - Official BU Inter-Collegiate Athletic Meet
+            
+            // Track Events (Common for Men & Women)
+            const trackEvents = [
+                '100m', '200m', '400m', '800m', '1500m', '5000m', '10000m',
+                '400m Hurdles', '20km Walk', '3000m Steeplechase', 'Half Marathon'
+            ];
+            
+            // Gender-specific Track Events
+            const menTrackEvents = ['110m Hurdles'];
+            const womenTrackEvents = ['100m Hurdles'];
+            
+            // Jumping Events (Men & Women)
+            const jumpingEvents = [
+                'High Jump', 'Long Jump', 'Pole Vault', 'Triple Jump'
+            ];
+            
+            // Throwing Events (Men & Women)
+            const throwingEvents = [
+                'Discus Throw', 'Hammer Throw', 'Javelin Throw', 'Shot Put'
+            ];
+            
+            // Combined Events (Gender-specific)
+            const menCombinedEvents = ['Decathlon'];
+            const womenCombinedEvents = ['Heptathlon'];
+            
+            // Build complete event list based on gender
+            const getMenEvents = () => [
+                ...trackEvents,
+                ...menTrackEvents,
+                ...jumpingEvents,
+                ...throwingEvents,
+                ...menCombinedEvents
+            ];
+            
+            const getWomenEvents = () => [
+                ...trackEvents,
+                ...womenTrackEvents,
+                ...jumpingEvents,
+                ...throwingEvents,
+                ...womenCombinedEvents
+            ];
+            
+            // Relay Events
+            const relayEvents = ['4x100m Relay', '4x400m Relay'];
+            const mixedRelayEvents = ['4x400m Mixed Relay'];
+            
+            // Get events based on active tab
+            const allEvents = activeTab === 'men' ? getMenEvents() : getWomenEvents();
+
+            const college = colleges.find(c => c.id == selectedCollege);
+            const collegeAthletes = athletes.filter(a => a.collegeId == selectedCollege);
+            const maleAthletes = collegeAthletes.filter(a => a.gender === 'Male');
+            const femaleAthletes = collegeAthletes.filter(a => a.gender === 'Female');
+
+            // Get event athlete count (max 2 per college per event)
+            // Includes athletes in current form rows + already saved athletes
+            const getEventAthleteCount = (eventName, gender) => {
+                if (!selectedCollege || !eventName) return 0;
+                const genderType = gender === 'men' ? 'Male' : 'Female';
+                
+                // Count from database
+                const dbCount = athletes.filter(a => 
+                    a.collegeId == selectedCollege && 
+                    a.gender === genderType &&
+                    (a.event1 === eventName || a.event2 === eventName)
+                ).length;
+                
+                // Count from current form rows (not yet saved)
+                const formCount = athleteRows.filter(row => 
+                    (row.event1 === eventName || row.event2 === eventName)
+                ).length;
+                
+                return dbCount + formCount;
+            };
+
+            // Get relay team member count (max 4 per college per relay event)
+            const getRelayTeamCount = (relayEvent) => {
+                if (!selectedCollege || !relayEvent) return 0;
+                const gender = activeTab === 'men' ? 'Male' : 'Female';
+                
+                // Count from database
+                const dbCount = athletes.filter(a => 
+                    a.collegeId == selectedCollege && 
+                    a.gender === gender &&
+                    (a.relay1 === relayEvent || a.relay2 === relayEvent)
+                ).length;
+                
+                // Count from current form rows (not yet saved)
+                const formCount = athleteRows.filter(row =>
+                    (row.relay1 === relayEvent || row.relay2 === relayEvent)
+                ).length;
+                
+                return dbCount + formCount;
+            };
+
+            // Get mixed relay count by gender (2M + 2F required)
+            const getMixedRelayCount = () => {
+                if (!selectedCollege) return { male: 0, female: 0, total: 0 };
+                
+                // Count from database
+                const dbMale = athletes.filter(a => 
+                    a.collegeId == selectedCollege && 
+                    a.gender === 'Male' &&
+                    a.mixedRelay
+                ).length;
+                
+                const dbFemale = athletes.filter(a => 
+                    a.collegeId == selectedCollege && 
+                    a.gender === 'Female' &&
+                    a.mixedRelay
+                ).length;
+                
+                // Count from current form rows
+                const formMale = athleteRows.filter(row => 
+                    row.mixedRelay && activeTab === 'men'
+                ).length;
+                
+                const formFemale = athleteRows.filter(row => 
+                    row.mixedRelay && activeTab === 'women'
+                ).length;
+                
+                const totalMale = dbMale + formMale;
+                const totalFemale = dbFemale + formFemale;
+                
+                return {
+                    male: totalMale,
+                    female: totalFemale,
+                    total: totalMale + totalFemale
+                };
+            };
+
+            // Check if mixed relay is available for current gender
+            const isMixedRelayAvailable = (currentRowId) => {
+                const counts = getMixedRelayCount();
+                const currentGender = activeTab === 'men' ? 'Male' : 'Female';
+                
+                // Check if current row already has mixed relay selected
+                const currentRow = athleteRows.find(r => r.id === currentRowId);
+                if (currentRow && currentRow.mixedRelay) {
+                    return true; // Allow editing
+                }
+                
+                // Check gender quota
+                if (currentGender === 'Male' && counts.male >= 2) {
+                    return false; // Male quota full
+                }
+                if (currentGender === 'Female' && counts.female >= 2) {
+                    return false; // Female quota full
+                }
+                
+                // Check total quota
+                if (counts.total >= 4) {
+                    return false; // Team full
+                }
+                
+                return true;
+            };
+
+            // Check if event is available (not at quota) for a specific row
+            const isEventAvailable = (eventName, gender, currentRowId, fieldName) => {
+                if (!eventName) return true;
+                
+                const count = athletes.filter(a => 
+                    a.collegeId == selectedCollege && 
+                    a.gender === (gender === 'men' ? 'Male' : 'Female') &&
+                    (a.event1 === eventName || a.event2 === eventName)
+                ).length;
+                
+                // Count in other rows (excluding current row's other field)
+                const rowCount = athleteRows.filter(row => {
+                    if (row.id === currentRowId) {
+                        // For current row, don't count the field being edited
+                        if (fieldName === 'event1') return row.event2 === eventName;
+                        if (fieldName === 'event2') return row.event1 === eventName;
+                    }
+                    return row.event1 === eventName || row.event2 === eventName;
+                }).length;
+                
+                return (count + rowCount) < 2;
+            };
+
+            // Check if relay is available (max 4 members) for a specific row
+            const isRelayAvailable = (relayEvent, currentRowId, fieldName) => {
+                if (!relayEvent) return true;
+                
+                const gender = activeTab === 'men' ? 'Male' : 'Female';
+                
+                // Count athletes in database
+                const dbCount = athletes.filter(a => 
+                    a.collegeId == selectedCollege && 
+                    a.gender === gender &&
+                    (a.relay1 === relayEvent || a.relay2 === relayEvent)
+                ).length;
+                
+                // Count in current form rows (excluding current row's other field)
+                const formCount = athleteRows.filter(row => {
+                    if (row.id === currentRowId) {
+                        // For current row, don't count the field being edited
+                        if (fieldName === 'relay1') return row.relay2 === relayEvent;
+                        if (fieldName === 'relay2') return row.relay1 === relayEvent;
+                    }
+                    return row.relay1 === relayEvent || row.relay2 === relayEvent;
+                }).length;
+                
+                return (dbCount + formCount) < 4;
+            };
+
+            // Initialize with one empty row when college is selected
+            useEffect(() => {
+                if (selectedCollege && athleteRows.length === 0) {
+                    addAthleteRow();
+                }
+            }, [selectedCollege]);
+
+            // Add new athlete row
+            const addAthleteRow = () => {
+                const newRow = {
+                    id: Date.now(),
+                    name: '',
+                    uucms: '',
+                    event1: '',
+                    event2: '',
+                    relay1: '',
+                    relay2: '',
+                    mixedRelay: ''
+                };
+                setAthleteRows([...athleteRows, newRow]);
+            };
+
+            // Delete athlete row
+            const deleteAthleteRow = (id) => {
+                setAthleteRows(athleteRows.filter(row => row.id !== id));
+            };
+
+            // Update athlete row field
+            const updateAthleteRow = (id, field, value) => {
+                setAthleteRows(athleteRows.map(row => 
+                    row.id === id ? { ...row, [field]: value } : row
+                ));
+            };
+
+            // Validation Functions
+            const validateName = (name) => {
+                if (!name) return 'Name is required';
+                if (!/^[a-zA-Z\s.]+$/.test(name)) {
+                    return 'Name can only contain letters, spaces, and periods';
+                }
+                return null;
+            };
+
+            const validateUUCMS = (uucms, rowId) => {
+                // UUCMS is OPTIONAL - only validate if provided
+                if (!uucms) return null;
+                
+                // Check duplicates in current rows
+                const duplicateInRows = athleteRows.filter(row => row.id !== rowId && row.uucms && row.uucms === uucms);
+                if (duplicateInRows.length > 0) return 'UUCMS already exists in current form';
+                
+                // Check duplicates in database
+                const duplicateInDB = athletes.find(a => a.uucms && a.uucms === uucms);
+                if (duplicateInDB) return 'UUCMS already exists in the system';
+                
+                return null;
+            };
+
+            const validateRow = (row) => {
+                const errors = [];
+                
+                // Name is mandatory
+                const nameError = validateName(row.name);
+                if (nameError) errors.push(nameError);
+                
+                // UUCMS is optional
+                const uucmsError = validateUUCMS(row.uucms, row.id);
+                if (uucmsError) errors.push(uucmsError);
+                
+                // At least one event or relay must be selected (relay-only athletes are valid)
+                const hasAnyEvent = row.event1 || row.event2 || row.relay1 || row.relay2 || row.mixedRelay;
+                if (!hasAnyEvent) {
+                    errors.push('Athlete must participate in at least one event or relay');
+                }
+                
+                // Event 1 and Event 2 cannot be same
+                if (row.event1 && row.event2 && row.event1 === row.event2) {
+                    errors.push('Event 1 and Event 2 cannot be the same');
+                }
+
+                // Check event quotas (only if events are selected)
+                if (row.event1 && !isEventAvailable(row.event1, activeTab, row.id, 'event1')) {
+                    errors.push(`Event quota reached for ${row.event1} (max 2 athletes per college)`);
+                }
+                if (row.event2 && !isEventAvailable(row.event2, activeTab, row.id, 'event2')) {
+                    errors.push(`Event quota reached for ${row.event2} (max 2 athletes per college)`);
+                }
+
+                // Check relay quotas (only if relays are selected)
+                if (row.relay1 && !isRelayAvailable(row.relay1, row.id, 'relay1')) {
+                    errors.push(`Relay quota reached for ${row.relay1} (max 1 team per college)`);
+                }
+                if (row.relay2 && !isRelayAvailable(row.relay2, row.id, 'relay2')) {
+                    errors.push(`Relay quota reached for ${row.relay2} (max 1 team per college)`);
+                }
+                
+                return errors;
+            };
+
+            // Generate chest number - Starting from 1001
+            const generateChestNumber = (index) => {
+                const allAthletes = athletes.filter(a => a.collegeId == selectedCollege);
+                const existingCount = allAthletes.length;
+                return String(1001 + existingCount + index);
+            };
+
+            // Submit all athletes
+            const handleSubmitAll = async () => {
+                if (!selectedCollege) {
+                    showToast('Please select a college', 'error');
+                    return;
+                }
+
+                if (athleteRows.length === 0) {
+                    showToast('Please add at least one athlete', 'error');
+                    return;
+                }
+
+                // Validate all rows
+                const allErrors = [];
+                athleteRows.forEach((row, index) => {
+                    const errors = validateRow(row);
+                    if (errors.length > 0) {
+                        allErrors.push(`Row ${index + 1}: ${errors.join(', ')}`);
+                    }
+                });
+
+                if (allErrors.length > 0) {
+                    showToast(allErrors[0], 'error');
+                    return;
+                }
+
+                // Save all athletes
+                try {
+                    const gender = activeTab === 'men' ? 'Male' : 'Female';
+                    
+                    for (let i = 0; i < athleteRows.length; i++) {
+                        const row = athleteRows[i];
+                        const chestNo = generateChestNumber(i);
+                        
+                        await API.create('athletes', {
+                            name: row.name,
+                            uucms: row.uucms,
+                            gender: gender,
+                            collegeId: selectedCollege,
+                            chestNo: chestNo,
+                            event1: row.event1 || null,
+                            event2: row.event2 || null,
+                            relay1: row.relay1 || null,
+                            relay2: row.relay2 || null,
+                            mixedRelay: row.mixedRelay || null,
+                            createdAt: new Date()
+                        });
+                    }
+
+                    showToast(`✓ ${athleteRows.length} athletes registered successfully!`, 'success');
+                    setAthleteRows([]);
+                    addAthleteRow(); // Reset with one empty row
+                    refetch();
+                } catch (error) {
+                    showToast('Error saving athletes', 'error');
+                }
+            };
+
+            const handleDeleteAthlete = async (id) => {
+                if (confirm('Delete this athlete?')) {
+                    await API.delete('athletes', id);
+                    showToast('Athlete deleted', 'success');
+                    refetch();
+                }
+            };
+
+            return (
+                <div className="min-h-screen bg-gray-50 py-8">
+                    <div className="max-w-7xl mx-auto px-6">
+                        {/* Header */}
+                        <div className="bg-white rounded-lg shadow-sm p-6 mb-6 border-l-4 border-blue-600">
+                            <h1 className="text-3xl font-bold text-gray-800">Athlete Registration</h1>
+                            <p className="text-gray-600 mt-1">BU Inter-Collegiate Athletic Meet</p>
+                        </div>
+
+                        {/* College Selection */}
+                        <div className="bg-white rounded-lg shadow-sm p-6 mb-6 border-l-4 border-blue-600">
+                            <label className="block text-sm font-bold text-gray-700 mb-3">
+                                Select College <span className="text-red-500">*</span>
+                            </label>
+                            <select
+                                value={selectedCollege}
+                                onChange={(e) => {
+                                    setSelectedCollege(e.target.value);
+                                    setAthleteRows([]);
+                                }}
+                                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            >
+                                <option value="">-- Choose College --</option>
+                                {colleges.map(c => (
+                                    <option key={c.id} value={c.id}>{c.name} ({c.code})</option>
+                                ))}
+                            </select>
+                        </div>
+
+                        {selectedCollege && (
+                            <>
+                                {/* Tabs */}
+                                <div className="bg-white rounded-lg shadow-sm mb-6">
+                                    <div className="flex border-b">
+                                        <button
+                                            onClick={() => {
+                                                setActiveTab('men');
+                                                setAthleteRows([]);
+                                            }}
+                                            className={`flex-1 px-6 py-4 font-semibold text-center transition ${
+                                                activeTab === 'men'
+                                                    ? 'bg-blue-600 text-white border-b-4 border-blue-700'
+                                                    : 'bg-white text-gray-600 hover:bg-gray-50'
+                                            }`}
+                                        >
+                                            🧔 Men's Events
+                                        </button>
+                                        <button
+                                            onClick={() => {
+                                                setActiveTab('women');
+                                                setAthleteRows([]);
+                                            }}
+                                            className={`flex-1 px-6 py-4 font-semibold text-center transition ${
+                                                activeTab === 'women'
+                                                    ? 'bg-pink-600 text-white border-b-4 border-pink-700'
+                                                    : 'bg-white text-gray-600 hover:bg-gray-50'
+                                            }`}
+                                        >
+                                            👩 Women's Events
+                                        </button>
+                                        <button
+                                            onClick={() => setActiveTab('all')}
+                                            className={`flex-1 px-6 py-4 font-semibold text-center transition ${
+                                                activeTab === 'all'
+                                                    ? 'bg-green-600 text-white border-b-4 border-green-700'
+                                                    : 'bg-white text-gray-600 hover:bg-gray-50'
+                                            }`}
+                                        >
+                                            👥 View All Athletes
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Content based on active tab */}
+                                {activeTab === 'all' ? (
+                                    /* View All Athletes Tab */
+                                    <div className="bg-white rounded-lg shadow-sm p-6">
+                                        <h2 className="text-2xl font-bold text-gray-800 mb-6">All Registered Athletes</h2>
+                                        
+                                        {/* Men's Section */}
+                                        <div className="mb-8">
+                                            <h3 className="text-xl font-bold text-blue-700 mb-4">👨 Men ({maleAthletes.length})</h3>
+                                            <div className="overflow-x-auto border rounded-lg">
+                                                <table className="w-full">
+                                                    <thead className="bg-blue-50">
+                                                        <tr>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">SL</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Chest No</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Name</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Gender</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">College Name</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Event 1</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Event 2</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Relay 1</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Relay 2</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Mixed Relay</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {maleAthletes.length === 0 ? (
+                                                            <tr>
+                                                                <td colSpan="11" className="px-4 py-8 text-center text-gray-500">
+                                                                    No male athletes registered yet
+                                                                </td>
+                                                            </tr>
+                                                        ) : (
+                                                            maleAthletes.map((a, idx) => {
+                                                                const athleteCollege = colleges.find(c => c.id === a.collegeId);
+                                                                return (
+                                                                    <tr key={a.id}>
+                                                                        <td className="px-4 py-3 text-sm">{idx + 1}</td>
+                                                                        <td className="px-4 py-3 text-sm font-bold text-blue-600">{a.chestNo}</td>
+                                                                        <td className="px-4 py-3 text-sm font-medium">{a.name}</td>
+                                                                        <td className="px-4 py-3 text-sm">
+                                                                            <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-semibold">M</span>
+                                                                        </td>
+                                                                        <td className="px-4 py-3 text-sm font-medium text-gray-700">
+                                                                            {athleteCollege ? athleteCollege.name : '-'}
+                                                                        </td>
+                                                                        <td className="px-4 py-3 text-sm">{a.event1 || '-'}</td>
+                                                                        <td className="px-4 py-3 text-sm">{a.event2 || '-'}</td>
+                                                                        <td className="px-4 py-3 text-sm">{a.relay1 || '-'}</td>
+                                                                        <td className="px-4 py-3 text-sm">{a.relay2 || '-'}</td>
+                                                                        <td className="px-4 py-3 text-sm">{a.mixedRelay || '-'}</td>
+                                                                        <td className="px-4 py-3 text-sm">
+                                                                            <button 
+                                                                                onClick={() => handleDeleteAthlete(a.id)}
+                                                                                className="text-red-600 hover:text-red-800"
+                                                                            >
+                                                                                🗑️
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                );
+                                                            })
+                                                        )}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        {/* Women's Section */}
+                                        <div>
+                                            <h3 className="text-xl font-bold text-pink-700 mb-4">👩 Women ({femaleAthletes.length})</h3>
+                                            <div className="overflow-x-auto border rounded-lg">
+                                                <table className="w-full">
+                                                    <thead className="bg-pink-50">
+                                                        <tr>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">SL</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Chest No</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Name</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Gender</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">College Name</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Event 1</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Event 2</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Relay 1</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Relay 2</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Mixed Relay</th>
+                                                            <th className="px-4 py-3 text-left text-xs font-bold text-gray-700">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {femaleAthletes.length === 0 ? (
+                                                            <tr>
+                                                                <td colSpan="11" className="px-4 py-8 text-center text-gray-500">
+                                                                    No female athletes registered yet
+                                                                </td>
+                                                            </tr>
+                                                        ) : (
+                                                            femaleAthletes.map((a, idx) => {
+                                                                const athleteCollege = colleges.find(c => c.id === a.collegeId);
+                                                                return (
+                                                                    <tr key={a.id}>
+                                                                        <td className="px-4 py-3 text-sm">{idx + 1}</td>
+                                                                        <td className="px-4 py-3 text-sm font-bold text-pink-600">{a.chestNo}</td>
+                                                                        <td className="px-4 py-3 text-sm font-medium">{a.name}</td>
+                                                                        <td className="px-4 py-3 text-sm">
+                                                                            <span className="px-2 py-1 bg-pink-100 text-pink-700 rounded text-xs font-semibold">F</span>
+                                                                        </td>
+                                                                        <td className="px-4 py-3 text-sm font-medium text-gray-700">
+                                                                            {athleteCollege ? athleteCollege.name : '-'}
+                                                                        </td>
+                                                                        <td className="px-4 py-3 text-sm">{a.event1 || '-'}</td>
+                                                                        <td className="px-4 py-3 text-sm">{a.event2 || '-'}</td>
+                                                                        <td className="px-4 py-3 text-sm">{a.relay1 || '-'}</td>
+                                                                        <td className="px-4 py-3 text-sm">{a.relay2 || '-'}</td>
+                                                                        <td className="px-4 py-3 text-sm">{a.mixedRelay || '-'}</td>
+                                                                        <td className="px-4 py-3 text-sm">
+                                                                            <button 
+                                                                                onClick={() => handleDeleteAthlete(a.id)}
+                                                                                className="text-red-600 hover:text-red-800"
+                                                                            >
+                                                                                🗑️
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                );
+                                                            })
+                                                        )}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    /* Men's/Women's Registration Form */
+                                    <div className="bg-white rounded-lg shadow-sm p-6">
+                                        <div className="flex justify-between items-center mb-6">
+                                            <div>
+                                                <h2 className="text-2xl font-bold text-gray-800">
+                                                    {activeTab === 'men' ? '🧔 Men\'s Events Registration' : '👩 Women\'s Events Registration'}
+                                                </h2>
+                                                <p className="text-gray-600 mt-1">Add athletes and select their events below</p>
+                                            </div>
+                                            <span className="px-4 py-2 bg-blue-100 text-blue-700 font-bold rounded-lg">
+                                                {athleteRows.length} {athleteRows.length === 1 ? 'Athlete' : 'Athletes'}
+                                            </span>
+                                        </div>
+
+                                        {/* Athlete Rows */}
+                                        <div className="space-y-4 mb-6">
+                                            {athleteRows.map((row, index) => (
+                                                <div key={row.id} className="border-2 border-blue-200 rounded-lg p-5 bg-blue-50">
+                                                    <div className="flex justify-between items-start mb-4">
+                                                        <span className="text-sm font-bold text-blue-700">SL NO: {index + 1}</span>
+                                                        {athleteRows.length > 1 && (
+                                                            <button
+                                                                onClick={() => deleteAthleteRow(row.id)}
+                                                                className="px-3 py-1 bg-red-600 text-white text-sm rounded-lg hover:bg-red-700 font-semibold"
+                                                            >
+                                                                🗑️ Delete Row
+                                                            </button>
+                                                        )}
+                                                    </div>
+
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                        {/* Row 1 */}
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                Athlete Name <span className="text-red-500">*</span>
+                                                            </label>
+                                                            <input
+                                                                type="text"
+                                                                value={row.name}
+                                                                onChange={(e) => updateAthleteRow(row.id, 'name', e.target.value)}
+                                                                className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                                placeholder="Enter full name"
+                                                            />
+                                                        </div>
+
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                UUCMS No <span className="text-gray-500 text-xs">(Optional)</span>
+                                                            </label>
+                                                            <input
+                                                                type="text"
+                                                                value={row.uucms}
+                                                                onChange={(e) => updateAthleteRow(row.id, 'uucms', e.target.value)}
+                                                                className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                                placeholder="Enter UUCMS ID (optional)"
+                                                            />
+                                                        </div>
+
+                                                        {/* Row 2 */}
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                Event 1
+                                                            </label>
+                                                            <select
+                                                                value={row.event1}
+                                                                onChange={(e) => updateAthleteRow(row.id, 'event1', e.target.value)}
+                                                                className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                            >
+                                                                <option value="">Select Event</option>
+                                                                {allEvents.map(e => {
+                                                                    const count = getEventAthleteCount(e, activeTab);
+                                                                    const available = count < 2;
+                                                                    return (
+                                                                        <option key={e} value={e} disabled={!available}>
+                                                                            {e} {available ? `(${count}/2)` : '(Full)'}
+                                                                        </option>
+                                                                    );
+                                                                })}
+                                                            </select>
+                                                        </div>
+
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                Event 2
+                                                            </label>
+                                                            <select
+                                                                value={row.event2}
+                                                                onChange={(e) => updateAthleteRow(row.id, 'event2', e.target.value)}
+                                                                className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                            >
+                                                                <option value="">Select Event</option>
+                                                                {allEvents.filter(e => e !== row.event1).map(e => {
+                                                                    const count = getEventAthleteCount(e, activeTab);
+                                                                    const available = count < 2;
+                                                                    return (
+                                                                        <option key={e} value={e} disabled={!available}>
+                                                                            {e} {available ? `(${count}/2)` : '(Full)'}
+                                                                        </option>
+                                                                    );
+                                                                })}
+                                                            </select>
+                                                        </div>
+
+                                                        {/* Row 3 - Relays */}
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                Relay 1
+                                                            </label>
+                                                            <select
+                                                                value={row.relay1}
+                                                                onChange={(e) => updateAthleteRow(row.id, 'relay1', e.target.value)}
+                                                                className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                            >
+                                                                <option value="">Select Relay</option>
+                                                                {relayEvents.map(e => {
+                                                                    const count = getRelayTeamCount(e);
+                                                                    const available = count < 4;
+                                                                    return (
+                                                                        <option key={e} value={e} disabled={!available}>
+                                                                            {e} {available ? `(${count}/4)` : '(4/4 Team Full)'}
+                                                                        </option>
+                                                                    );
+                                                                })}
+                                                            </select>
+                                                        </div>
+
+                                                        <div>
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                Relay 2
+                                                            </label>
+                                                            <select
+                                                                value={row.relay2}
+                                                                onChange={(e) => updateAthleteRow(row.id, 'relay2', e.target.value)}
+                                                                className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                            >
+                                                                <option value="">Select Relay</option>
+                                                                {relayEvents.filter(e => e !== row.relay1).map(e => {
+                                                                    const count = getRelayTeamCount(e);
+                                                                    const available = count < 4;
+                                                                    return (
+                                                                        <option key={e} value={e} disabled={!available}>
+                                                                            {e} {available ? `(${count}/4)` : '(4/4 Team Full)'}
+                                                                        </option>
+                                                                    );
+                                                                })}
+                                                            </select>
+                                                        </div>
+
+                                                        <div className="md:col-span-2">
+                                                            <label className="block text-sm font-semibold text-gray-700 mb-2">
+                                                                Mixed Relay (2 Men + 2 Women)
+                                                            </label>
+                                                            <select
+                                                                value={row.mixedRelay}
+                                                                onChange={(e) => updateAthleteRow(row.id, 'mixedRelay', e.target.value)}
+                                                                className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                                                            >
+                                                                <option value="">Select Mixed Relay</option>
+                                                                {mixedRelayEvents.map(e => {
+                                                                    const counts = getMixedRelayCount();
+                                                                    const available = isMixedRelayAvailable(row.id);
+                                                                    const currentGender = activeTab === 'men' ? 'Male' : 'Female';
+                                                                    
+                                                                    let statusText = '';
+                                                                    if (!available) {
+                                                                        if (counts.total >= 4) {
+                                                                            statusText = '(Team Full 4/4)';
+                                                                        } else if (currentGender === 'Male' && counts.male >= 2) {
+                                                                            statusText = '(Male Limit 2/2)';
+                                                                        } else if (currentGender === 'Female' && counts.female >= 2) {
+                                                                            statusText = '(Female Limit 2/2)';
+                                                                        }
+                                                                    } else {
+                                                                        statusText = `(${counts.male}M + ${counts.female}F / 2M+2F)`;
+                                                                    }
+                                                                    
+                                                                    return (
+                                                                        <option key={e} value={e} disabled={!available}>
+                                                                            {e} {statusText}
+                                                                        </option>
+                                                                    );
+                                                                })}
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        {/* Action Buttons */}
+                                        <div className="flex gap-4">
+                                            <button
+                                                onClick={addAthleteRow}
+                                                className="flex-1 bg-blue-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-700 shadow-md"
+                                            >
+                                                ➕ Add Athlete
+                                            </button>
+                                            <button
+                                                onClick={handleSubmitAll}
+                                                className="flex-1 bg-green-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-green-700 shadow-md"
+                                            >
+                                                ✓ Submit Registration
+                                            </button>
+                                        </div>
+                                    </div>
+                                )}
+                            </>
+                        )}
+
+                        {!selectedCollege && (
+                            <div className="bg-white rounded-lg shadow-sm p-12 text-center">
+                                <div className="text-6xl mb-4">🏛️</div>
+                                <h3 className="text-xl font-semibold text-gray-700 mb-2">Select a College</h3>
+                                <p className="text-gray-600">Choose from the dropdown to start registration</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        };
+
+        // Main App
+        const App = () => {
+            const [user, setUser] = useState({ role: 'admin', name: 'Admin User' });
+            const [toasts, setToasts] = useState([]);
+            const [dbReady, setDbReady] = useState(false);
+
+            useEffect(() => {
+                API.initDB().then(() => {
+                    API.seedData().then(() => {
+                        setDbReady(true);
+                    });
+                });
+            }, []);
+
+            const showToast = (message, type = 'success') => {
+                const id = Date.now();
+                setToasts(prev => [...prev, { id, message, type }]);
+            };
+
+            const removeToast = (id) => {
+                setToasts(prev => prev.filter(t => t.id !== id));
+            };
+
+            if (!dbReady) {
+                return (
+                    <div className="min-h-screen flex items-center justify-center">
+                        <div className="text-center">
+                            <div className="text-6xl mb-4">⚡</div>
+                            <h2 className="text-2xl font-bold">Loading BU-AMS...</h2>
+                        </div>
+                    </div>
+                );
+            }
+
+            return (
+                <>
+                    <div className="fixed top-4 right-4 z-50 space-y-2">
+                        {toasts.map(t => <Toast key={t.id} message={t.message} type={t.type} onClose={() => removeToast(t.id)} />)}
+                    </div>
+                    <Header user={user} />
+                    <AthleteRegistration showToast={showToast} user={user} />
+                </>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "source": "User provided list (converted to JSON)",
+  "generated_at": "2025-11-22T05:43:06.918757",
+  "categories": {
+    "track": [
+      "100 Metres",
+      "200 Metres",
+      "400 Metres",
+      "800 Metres",
+      "1500 Metres",
+      "5000 Metres",
+      "10,000 Metres",
+      "400 Metres Hurdles",
+      "20 km Walk",
+      "3000 Metres Steeple Chase",
+      "4 × 100 Metres Relay",
+      "4 × 400 Metres Relay",
+      "4 × 400 Metres Mixed Relay",
+      "Half Marathon",
+      "100 Metres Hurdles (Women)",
+      "110 Metres Hurdles (Men)"
+    ],
+    "jumping": [
+      "High Jump",
+      "Long Jump",
+      "Pole Vault",
+      "Triple Jump"
+    ],
+    "throwing": [
+      "Discus Throw",
+      "Hammer Throw",
+      "Javelin Throw",
+      "Shot Put"
+    ],
+    "combined": {
+      "men": "Decathlon",
+      "women": "Heptathlon"
+    }
+  },
+  "notes": "Use event names exactly as listed. For relay events ensure team-based entries. Hurdles have gender-specific distances as indicated."
+}
