@@ -14,10 +14,6 @@ const Footer = () => (
     <p style={{ margin: "5px 0" }}>
       © simsdkc | Athletics Management System | Delivering Reliable Digital Infrastructure
     </p>
-
-    <p style={{ margin: "5px 0" }}>
-      Developed by: <strong style={{ color: "#a78bfa" }}>Deepu K C</strong>
-    </p>
   </footer>
 );
 
