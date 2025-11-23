@@ -66,6 +66,19 @@ app.use(
 );
 app.use(express.json());
 
+// ========== DIAGNOSTIC LOGGING ==========
+console.log('\n' + '='.repeat(60));
+console.log('🔍 ENVIRONMENT DIAGNOSTIC');
+console.log('='.repeat(60));
+console.log('NODE_ENV:', process.env.NODE_ENV);
+console.log('PORT:', process.env.PORT);
+console.log('CLIENT_URL:', process.env.CLIENT_URL);
+console.log('MONGODB_URI (first 50 chars):', process.env.MONGODB_URI?.substring(0, 50) + '...' || 'UNDEFINED ❌');
+console.log('MONGODB_URI length:', process.env.MONGODB_URI?.length || 0);
+console.log('MONGODB_URI has invisible chars:', /[\s\n\t]/.test(process.env.MONGODB_URI) ? 'YES ❌' : 'NO ✓');
+console.log('='.repeat(60) + '\n');
+// ========== END DIAGNOSTIC LOGGING ==========
+
 // MongoDB Connection
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/bu-ams';
 let mongoConnected = false;
