@@ -36,7 +36,8 @@ export default function LoginPage({ onLoginSuccess }) {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5002/api/auth/send-otp', {
+      const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5002';
+      const response = await fetch(`${API_BASE_URL}/api/auth/send-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
@@ -71,7 +72,8 @@ export default function LoginPage({ onLoginSuccess }) {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5002/api/auth/verify-otp', {
+      const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5002';
+      const response = await fetch(`${API_BASE_URL}/api/auth/verify-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp })

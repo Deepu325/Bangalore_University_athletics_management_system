@@ -26,7 +26,8 @@ export default function PEDPanel({ userEmail, userName, onLogout, showChangePass
   const fetchAthletes = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5002/api/athletes', {
+      const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5002';
+      const response = await fetch(`${API_BASE_URL}/api/athletes`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'

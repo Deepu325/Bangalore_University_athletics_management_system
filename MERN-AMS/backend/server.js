@@ -26,9 +26,11 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 // CORS Configuration for Render deployment
 app.use(
   cors({
-    origin: NODE_ENV === 'production' 
-      ? [CLIENT_URL, 'http://localhost:3000']
-      : '*',
+    origin: [
+      process.env.CLIENT_URL || 'http://localhost:3000',
+      'https://bangalore-university-athletics-mana.vercel.app',
+      'http://localhost:3000'
+    ],
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization']

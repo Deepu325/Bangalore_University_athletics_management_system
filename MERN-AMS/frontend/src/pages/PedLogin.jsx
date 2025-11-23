@@ -13,7 +13,8 @@ const PedLogin = ({ onLoginSuccess, onNavigateBack }) => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5002/api/auth/ped-login', {
+      const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5002';
+      const response = await fetch(`${API_BASE_URL}/api/auth/ped-login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

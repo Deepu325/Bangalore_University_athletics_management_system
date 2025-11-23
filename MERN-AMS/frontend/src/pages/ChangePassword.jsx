@@ -32,7 +32,8 @@ const ChangePassword = ({ onPasswordChanged, token }) => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5002/api/auth/change-password', {
+      const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5002';
+      const response = await fetch(`${API_BASE_URL}/api/auth/change-password`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
