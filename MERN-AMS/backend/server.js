@@ -26,11 +26,39 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 // CORS Configuration for Render deployment
 app.use(
   cors({
-    origin: [
-      process.env.CLIENT_URL || 'http://localhost:3000',
-      'https://bangalore-university-athletics-mana.vercel.app',
-      'http://localhost:3000'
-    ],
+    origin: function (origin, callback) {
+      // List of allowed origins
+      const allowedOrigins = [
+        'http://localhost:3000',
+        'http://localhost:5002',
+        'http://localhost:3000',
+        process.env.CLIENT_URL,
+        // Vercel deployments (all variations)
+        'https://bangalore-university-athletics-mana.vercel.app',
+        'https://bangalore-university-athletics-ma-git-e03fc3-deepu-kcs-projects.vercel.app',
+        // Allow any vercel.app subdomain (for preview deployments)
+        /^https:\/\/.+\.vercel\.app$/
+      ].filter(Boolean);
+
+      // If no origin (mobile apps, curl requests), allow it
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      // Check if origin matches allowed list or regex
+      const isAllowed = allowedOrigins.some(allowed => {
+        if (allowed instanceof RegExp) {
+          return allowed.test(origin);
+        }
+        return allowed === origin;
+      });
+
+      if (isAllowed) {
+        callback(null, true);
+      } else {
+        callback(new Error('CORS not allowed'));
+      }
+    },
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization']
