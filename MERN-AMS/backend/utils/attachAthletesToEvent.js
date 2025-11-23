@@ -21,7 +21,11 @@ export async function attachAthletesToEvent(eventId) {
       throw new Error('Event ID is required');
     }
 
+    // Convert to string for comparison if needed
+    const eventIdStr = eventId.toString();
+
     // Find all athletes registered in this event
+    // Need to query without population first to get raw ObjectIds
     const athletes = await Athlete.find({
       $or: [
         { event1: eventId },
@@ -30,7 +34,9 @@ export async function attachAthletesToEvent(eventId) {
         { relay2: eventId },
         { mixedRelay: eventId }
       ]
-    });
+    }).select('_id event1 event2 relay1 relay2 mixedRelay').lean();
+
+    console.log(`[attachAthletesToEvent] Event: ${eventIdStr}, Found ${athletes.length} athletes`);
 
     // Extract athlete IDs
     const athleteIds = athletes.map(a => a._id);

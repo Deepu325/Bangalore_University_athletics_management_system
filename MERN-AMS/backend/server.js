@@ -7,7 +7,9 @@ import College from './models/College.js';
 import Athlete from './models/Athlete.js';
 import Event from './models/Event.js';
 import Result from './models/Result.js';
+import User from './models/User.js';
 import collegeRoutes from './routes/colleges.js';
+import athletesRoutes from './routes/athletes.js';
 import authRoutes from './routes/auth.js';
 import resultRoutes from './routes/results.js';
 import teamScoresRoutes from './routes/teamScores.js';
@@ -134,6 +136,9 @@ app.use('/api/auth', authRoutes);
 
 // Mount college routes with controller
 app.use('/api/colleges', collegeRoutes);
+
+// Mount athletes routes
+app.use('/api/athletes', athletesRoutes);
 
 // Mount events routes (Stages 4, 6, 7)
 app.use('/api/events', eventsRoutes);

@@ -105,6 +105,26 @@ router.patch('/:id', verifyToken, async (req, res) => {
     Object.assign(athlete, req.body);
     const updatedAthlete = await athlete.save();
     await updatedAthlete.populate('college');
+    
+    // Sync events if event registrations changed
+    if (req.body.event1 || req.body.event2 || req.body.relay1 || req.body.relay2 || req.body.mixedRelay) {
+      const { attachAthletesToEvent } = await import('../utils/attachAthletesToEvent.js');
+      
+      // Get all event IDs this athlete belongs to
+      const eventIds = [
+        updatedAthlete.event1,
+        updatedAthlete.event2,
+        updatedAthlete.relay1,
+        updatedAthlete.relay2,
+        updatedAthlete.mixedRelay
+      ].filter(Boolean);
+      
+      // Sync each event's participant list
+      for (const eventId of eventIds) {
+        await attachAthletesToEvent(eventId);
+      }
+    }
+    
     res.json(updatedAthlete);
   } catch (error) {
     res.status(400).json({ message: error.message });

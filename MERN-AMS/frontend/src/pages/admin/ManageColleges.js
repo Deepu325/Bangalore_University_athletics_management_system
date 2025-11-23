@@ -8,7 +8,8 @@ export default function ManageColleges() {
   const [editingId, setEditingId] = useState(null);
   const [msg, setMsg] = useState(null);
 
-  const API_URL = "http://localhost:5001/api"; // adjust based on your backend URL
+  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5002';
+  const API_URL = `${API_BASE_URL}/api`;
 
   useEffect(() => {
     load();
@@ -20,7 +21,8 @@ export default function ManageColleges() {
       const res = await fetch(`${API_URL}/colleges`);
       if (!res.ok) throw new Error("Failed to load colleges");
       const data = await res.json();
-      setColleges(data);
+      // API returns { ok, count, colleges } - extract the colleges array
+      setColleges(data.colleges || data || []);
     } catch (e) {
       setMsg({ type: "error", text: "Failed to load colleges" });
     } finally {

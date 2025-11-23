@@ -41,8 +41,9 @@ const ManageColleges = () => {
         return;
       }
       const data = await res.json();
-      console.log('✓ Fetched colleges:', data?.length || 0);
-      setColleges(data || []);
+      console.log('✓ Fetched colleges:', data?.colleges?.length || data?.length || 0);
+      // API returns { ok, count, colleges } - extract the colleges array
+      setColleges(data.colleges || data || []);
     } catch (err) {
       showNotification('Error fetching colleges', 'error');
       console.error('Fetch error:', err);

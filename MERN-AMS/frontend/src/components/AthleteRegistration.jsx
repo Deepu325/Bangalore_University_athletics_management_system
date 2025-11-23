@@ -19,7 +19,8 @@ export default function AthleteRegistration({ showToast, pedCollege }) {
         const response = await fetch(`${API_BASE_URL}/api/colleges`);
         if (response.ok) {
           const data = await response.json();
-          setColleges(data);
+          // API returns { ok, count, colleges } - extract the colleges array
+          setColleges(data.colleges || data || []);
         }
       } catch (error) {
         console.error('Error fetching colleges:', error);
