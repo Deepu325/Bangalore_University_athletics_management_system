@@ -19,9 +19,21 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:3000';
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Middleware
-app.use(cors());
+// CORS Configuration for Render deployment
+app.use(
+  cors({
+    origin: NODE_ENV === 'production' 
+      ? [CLIENT_URL, 'http://localhost:3000']
+      : '*',
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization']
+  })
+);
 app.use(express.json());
 
 // MongoDB Connection
@@ -128,6 +140,26 @@ const sendOtpEmail = async (email, otp) => {
 
 console.log('✓ Server initialized');
 console.log(`${mongoConnected ? '🗄️  Database: MongoDB' : '💾 Database: In-Memory Storage'}`);
+
+// Health Check Routes - For deployment monitoring
+app.get('/', (req, res) => {
+  res.json({
+    status: 'success',
+    message: 'BU-AMS Backend is running successfully!',
+    environment: NODE_ENV,
+    database: mongoConnected ? 'Connected to MongoDB' : 'Using In-Memory Storage'
+  });
+});
+
+app.get('/api/health', (req, res) => {
+  res.json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    environment: NODE_ENV,
+    mongodb: mongoConnected ? 'connected' : 'disconnected'
+  });
+});
 
 // Routes - Simple in-memory API (no database needed)
 
