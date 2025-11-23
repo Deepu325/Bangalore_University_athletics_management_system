@@ -161,6 +161,11 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Simple health check endpoint (for deployment monitoring)
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', timestamp: new Date() });
+});
+
 // Routes - Simple in-memory API (no database needed)
 
 // Mount auth routes
