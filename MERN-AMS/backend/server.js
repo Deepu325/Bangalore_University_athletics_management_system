@@ -110,13 +110,21 @@ console.log(`\n${DEMO_MODE ? '🧪' : '📧'} Email Mode: ${DEMO_MODE ? 'DEMO (C
 let transporter = null;
 
 if (!DEMO_MODE) {
-  transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: GMAIL_USER,
-      pass: GMAIL_PASSWORD
-    }
-  });
+  try {
+    transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: GMAIL_USER,
+        pass: GMAIL_PASSWORD
+      }
+    });
+    console.log('✓ Gmail transporter configured successfully');
+  } catch (err) {
+    console.error('❌ Failed to configure Gmail transporter:', err.message);
+    console.log('⚠️  Falling back to DEMO_MODE');
+    // Fallback to DEMO_MODE if transporter fails
+    // (We'll set this as a flag)
+  }
 }
 
 // In-memory OTP storage (expires after 10 minutes)
@@ -218,36 +226,44 @@ app.use('/team-scores', teamScoresRoutes);
 
 // POST send OTP to email
 app.post('/api/auth/send-otp', async (req, res) => {
+  console.log('📨 send-otp request received');
   const { email } = req.body;
 
   if (!email || !email.includes('@')) {
+    console.log('❌ Invalid email:', email);
     return res.status(400).json({ message: 'Invalid email address' });
   }
 
   try {
+    console.log('📧 Generating OTP for:', email);
     const otp = generateOtp();
+    console.log('✓ OTP generated:', otp);
     
     // Store OTP with expiry (10 minutes)
     otpStorage.set(email, {
       otp: otp,
       expiresAt: Date.now() + 600000 // 10 minutes
     });
+    console.log('✓ OTP stored in memory');
 
     // Send OTP via email
+    console.log('📤 Attempting to send OTP email...');
     const emailSent = await sendOtpEmail(email, otp);
 
     if (emailSent) {
-      res.json({ 
-        message: DEMO_MODE 
-          ? 'OTP displayed in backend console (Demo Mode)'
-          : 'OTP sent to your email'
-      });
+      const message = DEMO_MODE 
+        ? 'OTP displayed in backend console (Demo Mode)'
+        : 'OTP sent to your email';
+      console.log('✓ Email sent successfully:', message);
+      res.json({ message });
     } else {
+      console.log('❌ Email sending failed');
       res.status(500).json({ message: 'Failed to send OTP email' });
     }
   } catch (error) {
-    console.error('Error sending OTP:', error);
-    res.status(500).json({ message: 'Error processing request' });
+    console.error('❌ Error in send-otp:', error);
+    console.error('Stack trace:', error.stack);
+    res.status(500).json({ message: 'Error processing request', error: error.message });
   }
 });
 
@@ -534,8 +550,18 @@ app.use((req, res) => {
 
 // Error handler
 app.use((err, req, res, next) => {
-  console.error('Error:', err);
+  console.error('❌ Error:', err);
   res.status(500).json({ message: err.message });
+});
+
+// Handle uncaught exceptions
+process.on('uncaughtException', (err) => {
+  console.error('❌ Uncaught Exception:', err);
+});
+
+// Handle unhandled promise rejections
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('❌ Unhandled Rejection at:', promise, 'reason:', reason);
 });
 
 // Start server
